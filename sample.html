@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample page for BIMD 233</title>
+    </head>
+    <body>
+        <p>The main purpose of this page is to just give you examples of how different tags work in HTML. In this doc are all the basic tags you'd need to learn as a beginner (and for the course BIMD 233). This page only has HTML in it. No CSS or Javascript, yet.</p>
+        
+        <h1>Heading 1 (&lt;h1&gt;): The main title for the page, usually.</h1>
+
+        <div>I used to duplicate the &lt;title&gt; a lot since on the user side, the only time they see the title is in the tab label in their browser.</div>
+
+        <h2>Heading 2: Use headings to denote importance and sections</h2>
+
+        <h3>Heading 3: They're hierarchical</h3>
+
+        <p>Headings are treated very similarly to how they're treated in Google Docs. Like... really, very, exactly similarly... :P</p>
+
+        <p>Here's a paragraph. &lt;p&gt; tags include space above and below the text element.</p>
+
+        <div>&lt;div&gt; tags are sort of like paragraphs, except without extra space above and below. Technically, divs are used to mark a block of text so that you can then apply a style or treatment to the text. (See how there's no space between this block and the next one?)</div>
+
+        <div>It used to be that you'd only use paragraph tags, but they threw in div tags around HTML4 or so...  In some web apps, like Canvas, if you hit enter while composing a message or discussion post, it'd create a new paragraph and treat it with space above and below, but then this totally screws up when you try to copy-paste it into an email... Different apps do it differently, I would guess because the developers decided to treat carriage returns as either creating a new &lt;p&gt; tag or a new &lt;div&gt; tag.</div>
+
+        <p>Paragraph tags denote a particular meaning for the block of text it surrounds, letting people (and your web browser or a web app--aka the semantic web) know what kind of text it's dealing with.</p>
+
+        <p>Within a block of text, if you want to tell the web browser that a specific section of text should be treated differently, like say you want to style it a particular way, you can use <span>the &lt;span&gt; tag</span>.</p>
+
+        <table border="1" width="500">
+            <tr>
+                <td width="50%">This is a table</td>
+                <td width="50%">Huzzah!</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>This table is styled completely with HTML. For example, I set the border width to "1" and I made the two columns equally wide.</p>
+                    <p>Most of the attributes for the table element have been deprecated with HTML5 (and HTML4, actually). In fact, most ways of styling text using HTML have been deprecated in favor of stylesheets, but most modern browsers are backwards compatible...</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Back in the day, you'd use tables to slice up images and make certain parts of the images clickable or change if you hover your mouse over them or something.</td>
+            </tr>
+        </table>
+
+        <p>This is an unordered list:</p>
+
+        <ul>
+            <li>GitHub Pull Requests</li>
+            <li>HTML CSS Support</li>
+            <li>HTMLHint</li>
+            <li>IntelliSense for CSS class names in HTML</li>
+            <li>Preview on Web Server</li>
+        </ul>
+       
+        <p>You can also make an ordered list:</p>
+
+        <ol>
+            <li>See?</li>
+            <li>yay!</li>
+        </ol>
+
+        <p>Here's some text that links to a site.. um... How about <a href="https://snopes.com">Snopes</a>. That way you can debunk some fake news that permeates <a href="https://facebook.com">Facebook</a>.</p>
+
+        <p>And here's an image:</p>
+
+        <img src="media/cat dragon.jpg" width="500" />
+
+    </body>
+</html>
