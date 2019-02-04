@@ -8,13 +8,15 @@
         
         <h1>Heading 1 (&lt;h1&gt;): The main title for the page, usually.</h1>
 
-        <div>I used to duplicate the &lt;title&gt; a lot since on the user side, the only time they see the title is in the tab label in their browser.</div>
+        <div>I used to duplicate the &lt;title&gt;, which is found in the &lt;head&gt; section of the document, a lot since, on the user side, the only time they see whatever was specified in &lt;title&gt; is in the tab label in their browser.</div>
 
         <h2>Heading 2: Use headings to denote importance and sections</h2>
 
         <h3>Heading 3: They're hierarchical</h3>
 
         <p>Headings are treated very similarly to how they're treated in Google Docs. Like... really, very, exactly similarly... :P</p>
+
+        <hr>
 
         <p>Here's a paragraph. &lt;p&gt; tags include space above and below the text element.</p>
 
@@ -26,6 +28,44 @@
 
         <p>Within a block of text, if you want to tell the web browser that a specific section of text should be treated differently, like say you want to style it a particular way, you can use <span>the &lt;span&gt; tag</span>.</p>
 
+        <p>Let's say you need to throw in a line-break, but content-wise the next line is still considered part of the previous stuff in the same &lt;div&gt; or &lt;p&gt; block.<br>
+        You could use the &lt;br&gt; tag to do that.</p>
+    
+        <p>There's also a way to mark off a new section using the &lt;hr&gt; tag. It used to just add a horizontal rule (which is why it's called hr), but now it plays a content mark instead of a stylistic mark. You could then use CSS to tell the document how to render the &lt;hr&gt; tag. Without that style specified, though, it still just renders as a horizontal rule:</p>
+    
+        <hr>
+    
+        <p>^ See the horizonal rule? Anyway, continuing on...</p>
+
+        <p>Below is an unordered list that shows off how to mark specific words or phrases for emphasis or highlighting in a document. Technically, you could use &lt;span&gt; for all of the different styles you want to apply, but this is a quick way to marking different text as different categories of content.</p>
+
+        <ul>
+            <li><strong>&lt;strong&gt; lets you mark text as important (usually bolded).</strong></li>
+            <li><em>&lt;em&gt; lets you mark text that needs emphasis (usually italicized).</em></li>
+            <li>You could do the same as the above with <b>&lt;b&gt; bold</b> and <i>&lt;i&gt; italics</i> tags, but those are discouraged now since they mark particular styles.</li>
+            <li>It'll make more sense why when we get into CSS.</li>
+            <li>There's a bunch of more ways to markup text (just consult one of the references). Bolding and italicizing are the main ones people find they need to use.</li>
+        </ul>
+       
+        <p>By the way, you can also make an ordered list (as in, the bullets are replaced by numbers):</p>
+
+        <ol>
+            <li>Other text markup that might be handy include <sub>&lt;sub&gt;</sub></li>
+            <li>and <sup>&lt;sup&gt;</sup>.</li>
+        </ol>
+
+        <dl>
+            <dt>There's also definition lists.</dt>
+            <dd>(using &lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; tags)</dd>
+            <dd>Honestly, I've never seen anyone actually use them...</dd>
+            <dd>I suppose it'd be handy if you're making a reference sort of page or something.</dd>
+        </dl>
+
+        <p>For quoting someone or something, <blockquote>you could use the &lt;blockquote&gt; tag for a paragraph.</blockquote></p>
+
+        <p>Or use the <q>&lt;q&gt; quote</q> tag for inline quotes.</p>
+        <hr>
+
         <table border="1" width="500">
             <tr>
                 <td width="50%">This is a table</td>
@@ -34,36 +74,25 @@
             <tr>
                 <td colspan="2">
                     <p>This table is styled completely with HTML. For example, I set the border width to "1" and I made the two columns equally wide.</p>
-                    <p>Most of the attributes for the table element have been deprecated with HTML5 (and HTML4, actually). In fact, most ways of styling text using HTML have been deprecated in favor of stylesheets, but most modern browsers are backwards compatible...</p>
+                    <p>Most of the attributes for the table element have been deprecated with HTML5. In fact, most ways of styling text using HTML have been deprecated in favor of stylesheets, but modern browsers tend to be backwards compatible...</p>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">Back in the day, you'd use tables to slice up images and make certain parts of the images clickable or change if you hover your mouse over them or something.</td>
+                <td colspan="2">Back in the day, you'd use tables to slice up images and make certain parts of the images clickable or change if you hover your mouse over them or something. This is not how tables are meant to be used, though. HTML should generally be used to mark different parts of the document as different <em>content</em> parts, not stylistic but content-related.</td>
             </tr>
         </table>
 
-        <p>This is an unordered list:</p>
+        <p>Here's some text that uses an &lt;a&gt; anchor tag to link to a site.. um... How about <a href="https://snopes.com">Snopes</a>. That way you can debunk some fake news that permeates <a href="https://facebook.com">Facebook</a>.</p>
 
-        <ul>
-            <li>GitHub Pull Requests</li>
-            <li>HTML CSS Support</li>
-            <li>HTMLHint</li>
-            <li>IntelliSense for CSS class names in HTML</li>
-            <li>Preview on Web Server</li>
-        </ul>
-       
-        <p>You can also make an ordered list:</p>
+        <p>There's a lot to the anchor tag that's used for hyperlinks, like linking to local pages (<a href="index.html">index.html</a>) vs linking to an outside website (<a href="https://markdangerchen.net/">markdangerchen.net</a>), so consult the references for proper syntax.</p>
 
-        <ol>
-            <li>See?</li>
-            <li>yay!</li>
-        </ol>
-
-        <p>Here's some text that links to a site.. um... How about <a href="https://snopes.com">Snopes</a>. That way you can debunk some fake news that permeates <a href="https://facebook.com">Facebook</a>.</p>
+        <p>You can also reference other sorts of resources (URIs) in anchor tags, not just hyperlinks (URLs). For example, you could reference an email address (<a href="mailto:markchen@uw.edu">markchen@uw.edu</a>).</p>
 
         <p>And here's an image:</p>
 
-        <img src="media/cat dragon.jpg" width="500" />
+        <img src="media/cat dragon.jpg" width="500" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!">
+
+        <p>Screen readers for the visually impaired read the alt attribute in an image tag, so it's generally a good idea to fill that in. If the image is purely decoration and not content, you can include a blank or null value (alt="") for your alt attribute, and screen readers will ignore the image. Additionally, when you hover your mouse over an image, it displays the text in the title attribute, so you may want to fill that in as well.</p>
 
     </body>
 </html>
