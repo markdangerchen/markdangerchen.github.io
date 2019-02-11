@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample page full of HTML code for BIMD 233</title>
+
+        <!--The below styles are generally ordered by when they appear in the document, so you could look at the page as it is rendered in your web browser and then view this source code and try to see which styles apply to which elements in the page.-->
+
+        <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, Helvetica, sans-serif;
+            color: #111111;
+            background: rgb(63, 14, 1);
+            font-weight: 500;
+        }
+        .boxes {
+            background-color: lightgray;
+            padding: 20px;
+            margin: 20px;
+            border: 3px solid black;
+            max-height: 500px;
+            overflow: scroll;
+            border-radius: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        p:first-line {
+            color: purple;
+        }
+        h1, h2, h3 {
+            color: black;
+            font-family: Georgia, serif;
+            font-weight: 900;
+            letter-spacing: -0.1em;
+            font-style: italic;
+            text-align: right;
+            font-weight: bold;
+        }
+        a {
+            font-weight: bold;
+        }
+        a:hover {
+            color: red;
+        }
+        p a {
+            text-transform: uppercase;
+        }
+        h1+p, h2+p, h3+p {
+            font-weight: 600;
+        }
+        #yay {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2em;
+            color: green;
+            font-weight: bold;
+        }
+        ol {
+            list-style-type: lower-roman;
+        }
+        strong {
+            font-weight: 900;
+        }
+        em {
+            font-style: oblique;
+            font-weight: 600;
+        }
+        table {
+            width: 75%;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th {
+            text-transform: uppercase;
+            font-size: 90%;
+            text-align: center;
+            border-bottom: 2px solid black;
+            border-top: 1px solid gray;
+            width: 50%;
+        }
+        tr.even {
+            background-color: skyblue;
+            font-weight: 600;
+        }
+        td {
+            border-bottom: 1px solid black;
+            text-align: right;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="boxes">
+            <a href="./">Home</a> | <a href="samplehtml.html">Sample HTML Page</a> | <a href="samplecss.html">Sample CSS Page</a> | <a href="samplejs.html">Sample JS Page</a>
+
+            <p>The main purpose of this page is to give you examples of how to use different ways to edit the presentation of a page and its text through the use of Cascading Style Sheets (CSS). In this doc are all the basic ways to specify different styles to different elements on the page. This page does not have any Javascript code, only HTML and CSS.</p>
+
+            <p>I started by duplicating the <a href="samplehtml.html">Sample HTML Page</a> and editing it, so some of the text is the same, but I did attempt to write informative text that describes what's happening to it. Focus on how the text is displayed, and check out the source code to see how it's done.</p>
+        </div>
+        <div class="boxes">
+            <p>We'll start with setting up the main body of the page in sort of a meta fashion. I threw in some code that makes the main text not quite black, put in a dark brown background color to mimic a desk, and set the default font and weight of the font. Usually when text is displayed on a non-white background, I like to make the weight just a tad heavier than normal to make it easier to read. A lot of how the text shows up is dependent on the browser, though, and some browsers don't have that much granularity to font size or weights.</p>
+
+            <h1>Heading 1 (&lt;h1&gt;): The main title for the page, usually.</h1>
+
+            <p>Above is a heading and the stylesheet specifies that h1, h2, and h3 tags will be right adjusted and italicized.</p>
+
+            <p>There's also a specification to treat the first paragraph following a heading differently than normal paragraphs (right now set to make the font weight heavier).</p>
+
+            <h2>Heading 2: Use headings to denote importance and sections</h2>
+
+            <h3>Heading 3: They're hierarchical</h3>
+
+            <p>Headings are treated very similarly to how they're treated in Google Docs. Like... really, very, exactly similarly... :P</p>
+        </div>
+        <div class="boxes">
+            <h2>Basic text manipulation</h2>
+
+            <p>I decided to replace the horizontal rule tags in the initial sample page with sections in boxes instead. Most text elements can be thought of as existing in their own boxes. It's just that we don't see the boxes since they default to having no borders, etc. I set this document up so that some elements are given a class name and then set those elements to throw in a black border and color their interiors with a different background color than the main body of the page.</p>
+
+            <p>So that's why you see these light gray boxes that hold the text, initially trying to mimic sheets of paper on the brown desk. But as I coded examples, in I threw in scrolling boxes and gave them rounded corners, so they don't really look like paper anymore.</p>
+
+            <p>Within a block of text, if you want to tell the web browser that a specific section of text should be treated differently, like say you want to style it a particular way, you can use <span id="yay">the &lt;span&gt; tag</span> and then give that tag an id or a class name and set the style for that element id or class.</p>
+        </div>
+        <div class="boxes">
+            <h2>Lists and text styles</h2>
+
+            <p>Below is an unordered list that shows off how to mark specific words or phrases for emphasis or highlighting in a document. Technically, you could use &lt;span&gt; for all of the different styles you want to apply, but this is a quick way to marking different text as different categories of content.</p>
+
+            <ol>
+                <li><strong>&lt;strong&gt; lets you mark text as important (usually bolded).</strong></li>
+                <li><em>&lt;em&gt; lets you mark text that needs emphasis (usually italicized).</em></li>
+                <li>You could do the same as the above with <b>&lt;b&gt; bold</b> and <i>&lt;i&gt; italics</i> tags, but those are discouraged now since they mark particular styles.</li>
+                <li>I changed how strong and em are treated with the stylesheet, btw.</li>
+                <li>There's a bunch of more ways to markup text (just consult one of the references). Bolding and italicizing are the main ones people find they need to use.</li>
+            </ol>
+        
+            <p>I set the list above to use roman numerals instead of our normal arabic ones. As with almost everything else, there's a ton more you can do to a particular element on a page with stylesheets. Just look them up in one of the reference docs found on the <a href="./">general portal homepage</a>.</p>
+        </div>
+        <div class="boxes">
+            <h2>Tables and links</h2>
+
+            <p>Ok. This is where it gets complicated quick: TABLES!</p>
+
+            <table>
+                <tr>
+                    <th>This is a table</th>
+                    <th>Huzzah!</th>
+                </tr>
+                <tr class="even">
+                    <td colspan="2">
+                        <p>This table is styled completely with CSS instead of HTML. For example, I set the border width to 2px, gave the header a bottom and top border of different weights, and made the text ALL CAPS.</p>
+
+                        <p>Most of the attributes for the table element have been deprecated with HTML5. In fact, most ways of styling text using HTML have been deprecated in favor of stylesheets, but modern browsers tend to be backwards compatible...</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>The regular text within the cells are right adjusted, too.</p>
+                        <p>Again, there's quite a bit to CSS that you can do, so start looking at examples online for inspiration and then look at their source code or consult a good reference! With CSS, there's so much more flexibility to how things look than with just HTML. (Once we start Javascript stuff, you'll then start changing how things <em>behave</em>, too.)</p>
+                    </td>
+                </tr>
+            </table>
+
+            <p>Here's some text that uses an &lt;a&gt; anchor tag to link to a site.. um... How about <a href="https://snopes.com">Snopes</a>. That way you can debunk some fake news that permeates <a href="https://facebook.com">Facebook</a>.</p>
+
+            <p>There's a lot to the anchor tag that's used for hyperlinks, like linking to local pages (<a href="index.html">index.html</a>) vs linking to an outside website (<a href="https://markdangerchen.net/">markdangerchen.net</a>), so consult the references for proper syntax.</p>
+
+            <p>You can also reference other sorts of resources (URIs) in anchor tags, not just hyperlinks (URLs). For example, you could reference an email address (<a href="mailto:markchen@uw.edu">markchen@uw.edu</a>).</p>
+
+            <p>Notice how the anchor texts turns red when you move your mouse over them? That's done with the stylesheet. You may also notice that the anchors appear differently than the ones at the very top of this page. That's an example of specifying a treatment to anchor descendents of a paragraph. In other words, anchor tags within paragraph tags are treated differently than ones outside of paragraphs.</p>
+        </div>
+        <div class="boxes">
+            <h2>Images</h2>
+
+            <p>And here's an image:</p>
+
+            <img src="media/cat dragon.jpg" width="500" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!">
+
+            <p>Screen readers for the visually impaired read the alt attribute in an image tag, so it's generally a good idea to fill that in. If the image is purely decoration and not content, you can include a blank or null value (alt="") for your alt attribute, and screen readers will ignore the image. Additionally, when you hover your mouse over an image, it displays the text in the title attribute, so you may want to fill that in as well.</p>
+        </div>
+    </body>
+</html>
