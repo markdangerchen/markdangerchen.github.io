@@ -11,18 +11,20 @@
             color: #111111;
             background: rgb(63, 14, 1);
             font-weight: 500;
+            background-image: url("media/wood.jpg")
         }
         .boxes {
             background-color: lightgray;
             padding: 20px;
             margin: 20px;
             border: 3px solid black;
-            max-height: 500px;
+            max-height: 600px;
             overflow: scroll;
             border-radius: 15px;
             margin-left: auto;
             margin-right: auto;
             width: 80%;
+            max-width: 900px;
         }
         p:first-line {
             color: purple;
@@ -31,7 +33,6 @@
             color: black;
             font-family: Georgia, serif;
             font-weight: 900;
-            letter-spacing: -0.1em;
             font-style: italic;
             text-align: right;
             font-weight: bold;
@@ -85,6 +86,49 @@
         td {
             border-bottom: 1px solid black;
             text-align: right;
+        }
+        img.medium {
+            width: 500px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        img.small {
+            width: 250px;
+        }
+        img.left {
+            float: left;
+            margin-right: 10px;
+        }
+        img.right {
+            float: right;
+            margin-left: 10px;
+        }
+        p.withimage {
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.button {
+            border: 1px solid red;
+            border-radius: 10px;
+            width: 150px;
+            padding: 10px;
+            text-align: center;
+            background-color: pink;
+            margin: auto;
+        }
+        div.button:hover {
+            background-color: white;
+            border: 1px solid black;
+        }
+        div.button:active {
+            background-color: darkred;
+        }
+        div.button a {
+            color: red;
+        }
+        div.button a:active {
+            color: pink;
         }
         </style>
     </head>
@@ -174,9 +218,12 @@
 
             <p>And here's an image:</p>
 
-            <img src="media/cat dragon.jpg" width="500" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!">
+            <p><img src="media/cat dragon.jpg" class="medium" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!"></p>
+            
+            <p class="withimage"><img src="media/cat dragon.jpg" class="right small" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!">Screen readers for the visually impaired read the alt attribute in an image tag, so it's generally a good idea to fill that in. If the image is purely decoration and not content, you can include a blank or null value (alt="") for your alt attribute, and screen readers will ignore the image. Additionally, when you hover your mouse over an image, it displays the text in the title attribute, so you may want to fill that in as well.</p>
 
-            <p>Screen readers for the visually impaired read the alt attribute in an image tag, so it's generally a good idea to fill that in. If the image is purely decoration and not content, you can include a blank or null value (alt="") for your alt attribute, and screen readers will ignore the image. Additionally, when you hover your mouse over an image, it displays the text in the title attribute, so you may want to fill that in as well.</p>
+            <div class="button"><a href="#">sample button using CSS</a></div>
+
         </div>
     </body>
 </html>
