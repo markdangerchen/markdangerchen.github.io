@@ -90,7 +90,8 @@
             border-top: 1px solid gray;
             width: 50%;
         }
-        tr.even {
+        /* Found this tidbit! You can specify every odd or even row to be a different color than the others! */
+        tr:nth-child(even) {
             background-color: skyblue;
             font-weight: 600;
         }
@@ -181,7 +182,7 @@
 
     <body>
         <div class="boxes">
-            <a href="./">Home</a> | <a href="samplehtml.html">Sample HTML Page</a> | <a href="samplecss.html">Sample CSS Page</a> | <a href="samplejs.html">Sample JS Page</a>
+            <a href="./">Home</a> | <a href="samplehtml.html">Sample HTML Page</a> | <xa href="samplecss.html">Sample CSS Page</a> | <a href="samplejs.html">Sample JS Page</a>
 
             <p>The main purpose of this page is to give you examples of how to use different ways to edit the presentation of a page and its text through the use of Cascading Style Sheets (CSS). In this doc are all the basic ways to specify different styles to different elements on the page. This page does not have any Javascript code, only HTML and CSS.</p>
 
@@ -238,7 +239,7 @@
                     <th>This is a table</th>
                     <th>Huzzah!</th>
                 </tr>
-                <tr class="even">
+                <tr>
                     <td colspan="2">
                         <p>This table is styled completely with CSS instead of HTML. For example, I set the border width to 2px, gave the header a bottom and top border of different weights, and made the text ALL CAPS.</p>
 
