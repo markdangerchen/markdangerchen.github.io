@@ -12,11 +12,19 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
         <!-- End Bootstrap 4 includes -->
 
+        <style type="text/css">
+            .navbar .dropdown-item:hover {
+                background-color:gray;
+            }
+        </style>
+
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <!-- Bootstrap's "brand" class where you can put in a logo or just some text... -->
             <a class="navbar-brand" href="https://markdangerchen.github.io/">BIMD 233</a>
+            <!-- The button below is to make it so that when the width of the browser window is too small, the menu doesn't appear all wonky and instead just collapses into a hamburger menu. -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,14 +33,21 @@
                     <li class="nav-item active"><a class="nav-link" href="./">Info+Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="syllabus.html">Syllabus</a></li>
                     <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="samplehtml.html">Sample HTML</a></li>
-                    <li class="nav-item"><a class="nav-link" href="samplecss.html">Sample CSS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="samplejs.html">Sample JS</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Sample Pages</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="samplehtml.html">Sample HTML</a>
+                            <a class="dropdown-item" href="samplecss.html">Sample CSS</a>
+                            <a class="dropdown-item" href="samplebootstrap.html">Sample Bootstrap</a>
+                            <a class="dropdown-item" href="samplejs.html">Sample JS</a>
+                            <a class="dropdown-item" href="samplejquery.html">Sample jQuery</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
-
-        <div class="container" style="margin-top:60px;">
+        
+        <div class="container" style="margin-top:70px;">
             <h1>UWB BIMD 233 Info Page and Index</h1>
 
             <p>This page will help you get started with UWB's BIMD 233 Web Tehcnologies course with Dr. Mark Chen. If I'm feel particularly nifty, I'll convert this into the syllabus eventually. For now, it's mostly just acting as the portal page to the sample pages that you can refer to while learning HTML/CSS + JS.</p>
