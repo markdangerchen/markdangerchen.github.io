@@ -2,6 +2,8 @@
         body {
             background: rgb(10, 7, 14);
             background-image: url("media/darkwood.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             font-family: Helvetica, Arial, Helvetica, sans-serif;
             color: #111111;
             font-weight: 500;

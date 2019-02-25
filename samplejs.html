@@ -16,6 +16,8 @@
             body {
                 background: rgb(10, 7, 14);
                 background-image: url("media/darkwood.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
                 color: #111111;
             }
             /* Editing Bootstrap's default color of hover on dropdown menu item. */
@@ -53,18 +55,18 @@
 
     <body>
         <!-- Using Bootstrap's built-in navigation bar framework! The classes being used include speficications for how the bar should look, how it should respond to different window sizes, where it should be positioned, etc. -->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <nav class="pl-md-5 navbar navbar-expand-md bg-dark navbar-dark fixed-top">
             <!-- Bootstrap's "brand" class where you can put in a logo or just some text... -->
-            <a class="navbar-brand" href="https://markdangerchen.github.io/">BIMD 233</a>
+            <a class="navbar-brand" href="https://markdangerchen.github.io/">BIMD 233 Web Design</a>
             <!-- The button below is to make it so that when the width of the browser window is too small, the menu doesn't appear all wonky and instead just collapses into a hamburger menu. -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="./">Info+Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Syllabus+Info</a></li>
                     <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item active dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Sample Pages</a>
                         <div class="dropdown-menu">
@@ -78,53 +80,65 @@
                 </ul>
             </div>
         </nav>
-
+    
         <!-- This is where the main content of the page starts. Bootstrap uses a grid system for layout, which is funny to me because it reminds me of using tables for layout back in the day... We sort of knew we shouldn't be using tables since, technically, tables are supposed to be used for tabulated data and now graphic design or page layout, but without really good alternatives before CSS, we did it anyway. I don't know the history of why Bootstrap uses grids, but in my head I like to pretent people got wise after CSS came out and decided that the grid layout of tables made a lot of sense... -->
         <div class="container" style="margin-top:70px;">
 
             <div class="row">
-                <div class="col-md-8">
-                    <p>This page started with the Sample CSS Page, converted to Bootstrap (version 4), which is a common framework clever people created for all web developers to use, that features standard ways for creating repeatable types of elements like text boxes or navigation bars or whatnot.</p>
+                <div class="col">
+                    <h1>Sample Javascript Page</h1>
+
+                    <p>This page started with the Sample Bootstrap Page and added a bunch of Javascript behaviors into it.</p>
                     
-                    <p>The main purpose of this page is to give you examples of how to use different ways to edit the presentation of a page and its text through the use of Cascading Style Sheets (CSS). In this doc are all the basic ways to specify different styles to different elements on the page. This page does not have any Javascript code, only HTML and CSS.</p>
-
-                    <p>I started by duplicating the <a href="samplecss.html">Sample CSS Page</a> and editing it, so some of the text is the same, but I did attempt to write informative text that describes what's happening to it. Focus on how the text is displayed, and check out the source code to see how it's done with Bootstrap.</p>
-                </div>
-                <div class="col-md-4">
-                    <p>We'll start with setting up the main body of the page in sort of a meta fashion. Bootstrap uses grids to set layout on a page. Think of this page as a bunch of stacked rows with 12 cells (or columns, technically) in each row. Each row can have elements that take up one or more of those 12 cells. Bootstrap is smart in that all you have to do is tell it how many columns of content to display and it'll intelligently figure out how to make the content span across multiple cells to fill up the whole row. You could, however, also specific exacly how many columns a particular element should take... Does that make sense? Pretend you have a table or grid that's invisible and content is place into one or more of the cells on particular rows of the grid.</p>
+                    <p>The main purpose of this page is to give you examples of how to use different ways to edit the way a page's different elements react to user input. Most of the input has to do with mouse events that then tell the page to run some code. Since this course isn't about making websites that deal with data from some server but rather just the look and feel of pages, most of the reactions that we'll be doing are interface or visual effects. These serve to give users feedback and make the page feel responsive and like it acknowledges that the user has done something. With CSS, you could do some of this already with built-in event detectors like the <code>hover</code> state of a text element. And actually, we've cheated a little bit already with Bootstrap since it does already have some simple visual effects that use Javascript, like collapsing blocks of code (by toggling its visibility--and actually, technically, there's at least <a href="https://alligator.io/css/collapsible/">one way to collapse an element through pure CSS</a>...).</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <h1>Heading 1 (&lt;h1&gt;): The main title for the page, usually.</h1>
+                    <h2>Intro</h2>
 
-                    <p>Above is a heading. Remember all the basic display styles are defined by Bootstrap now, but you can override anything with your own styles specified after the Bootstrap includes. That's why they're called "cascading." You can specify a bunch of different ways to display a paragraph, for example. First it grabs the style from linked sheets then it looks for redefinitions or additional specs from this <code>&lt;style&gt;</code> block in usually found in the <code>&lt;head&gt;</code> up top, and, finally, it'll look at styles specified inline with the HTML. Each more specific drilldown overrides any previously defined properties.</p>
-            
-                    <h2>Heading 2: Use headings to denote importance and sections</h2>
+                    <p>Javascript is an actual programming language where you define functions for the page to execute when something happens. Often when you want it to do something, you also want to throw in some conditional logic. For example, let's say your user clicks on a cell in a table that displays a calendar month, and you want some pop-up text to let the user know they clicked on the cell but you also want it to know whether the date is even or odd or if it is a weekend day rather than a weekday and intelligently display text in the pop-up depending on those conditions. If you didn't have Javascript, you'd have to define different class styles for each set of conditions and remember to make sure each cell has the right classes. Then you'd have to create a button in each cell or something and have the user click on the button for the pop-up to appear.</p>
 
-                    <h3>Heading 3: They're hierarchical</h3>
-
-                    <p>Headings are treated very similarly to how they're treated in Google Docs. Like... really, very, exactly similarly... :P</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md">
-                    <h2>Basic text manipulation</h2>
-
-                    <p>Most text elements can be thought of as existing in their own boxes. It's just that we don't see the boxes since they default to having no borders, etc. Each of the grid cells, using Bootstrap's <code>row</code> and <code>col</code> classes for <code>div</code> tags, I set this document up so that the <code>div</code> elements are to have a background color that's different than the main body of the page.</p>
-                </div>
-                <div class="col-md">
-                    <p>Within a block of text, if you want to tell the web browser that a specific section of text should be treated differently, like say you want to style it a particular way, you can use <span id="yay">the &lt;span&gt; tag</span> and then give that tag an id or a class name and set the style for that element id or class.</p>
+                    <p>With Javascript, you could instead have one class defined for every cell in the table and then add in an <code>onclick</code> event to whatever element you want clickable. The code will then execute and identify what's in the cell to determine if it's an odd or even number and which day it is. Then it'll throw a pop-up and the text will be different depending on what it detected.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <h2>Tables and links</h2>
+                    <h2>Variables, Conditions, and Logic</h2>
 
-                    <p>Ok. This is where it gets complicated quick: TABLES!</p>
+                    <p>In order to do the above intelligent pop-up, the code needs to identify text that is different in each cell and then remember it when it spits out the pop-up box. This is done by defining a variable and setting it to some value, denpending on what was clicked.</p>
+
+                    <p>The logic, in English, would be something like:</p>
+                    <ol>
+                        <li>Look for mouse clicks once the page has finished loading.</li>
+                        <li>When a mouse click happens, figure out which part of the webpage was clicked.</li>
+                        <li>Recognize that it was one of the cells in a calendar table.</li>
+                        <li>Read the contents of the cell.</li>
+                        <li>Store the contents into a variable to recall later.</li>
+                        <li>Throw up a pop-up message.</li>
+                        <li>Put in the message some text that's different depending on what it remembers from what was in the cell.</li>
+                    </ol>
+                    <p>Generally, you want to plan out your functionality this way for each bit of behavior that you want to program into the webpage. And, hey, that list of things to do is actually called a "function!"</p>
+
+                    <p>This way of thinking, where each step is spelled out and is required for subsequent steps could be called a "logical flow," and being able to do this well extends way past programming. Good research and persuasive writing requires a logical flow of arguments to be convincing. Playing strategy games requires some understanding of conditions and consequences. Etc. This is why a lot of educational researchers say that coding should be taught in K12 schools. It's not so much that they want kids to be able to program stuff; the real benefit is to help kids be able to think formally and logically.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2>Next Steps</h2>
+
+                    <p>This page will have the example clickable calendar so you can look at the code; I'll try to put intelligible comments. There is soooo much to Javascript and programming, though, and it's much more complex and complicated than straight up HTML and CSS. I feel like the best way to learn would be follow a robust tutorial, so please confer the <a href="resources.html">Resources Page</a> and especially follow the <a href="https://www.w3schools.com/js/default.asp">Javascript tutorials at w3schools.com</a>. See the <a href="assignments.html">Assignments Page</a> for what you should try to understand and include in your work.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2>Samples</h2>
+
+                    <h3>Calendar</h3>
 
                     <!-- Some Bootstrap classes to style the table quickly. -->
                     <table class="table table-dark table-striped table-hover">
@@ -149,53 +163,6 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <h2>Images</h2>
-
-                    <p>Aligning images and other elements... For text in CSS, you could use a style that uses <code>"text-align: center;"</code>, but for an image, the best way to do it I found was to set the image as a block and then set margins to the left and right to be automatically adjusted: <code>"display: block; margin-left: auto; margin-right: auto;"</code> The fact that different elements are treated differently is a little confusing, huh? And now with Bootstrap, that code is predefined in classes <code>mx-auto</code> and <code>d-block</code>.</p>
-
-                    <!-- So easy to center an image in Bootstrap now! -->
-                    <p><img src="media/cat dragon.jpg" class="mx-auto d-block" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!"></p>
-
-                    <div class="media">
-                        <div class="media-body">
-                            <p>I'm playing around with putting the image to the left or right of text... With CSS, this was done by setting a <code>float</code> position. There's also a way to use an object called a flexbox... It seems like Bootstrap 4 embraces the flexbox thing, so I'm trying it out here... Basically, you declare a new <code>div</code> section as a <code>media</code> class and then put the image and text into different parts of the section.</p>
-                        </div>
-                        <img src="media/cat dragon.jpg" class="align-self-start mr-3" style="width:200px;" alt="an image of a cat sitting on a partially collapsed awning with the caption How to spot a dragon using an illusion spell" title="cute kitty!">
-                    </div>  
-
-                    <p>Here's the grid of images again... they're done using the regular CSS code, actually, but it'd be possible to put them in the flexbox format or to use the grid system in Bootstrap.</p>
-
-                    <div class="img-container">
-                        <img src="media/cat dragon.jpg" alt="cute kitty" style="width:100%;">
-                    </div>
-                    <div class="img-container">
-                        <img src="media/cat dragon.jpg" alt="cute kitty" style="width:100%;">
-                    </div>
-                    <div class="img-container">
-                        <img src="media/cat dragon.jpg" alt="cute kitty" style="width:100%;">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <h2>Buttons</h2>
-                    <p>Ok. This is cool. Bootstrap has built-in buttons defined.</p>
-
-                    <p class="text-center"><a href="https://flic.kr/p/tvChuN" class="btn btn-danger" role="button">Don't Panic!</a></p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <h2>Main Assignment 2</h2>
-                    <p>This is most of what you'd need to get started. The challenge will be to put it all together. The main assignment for CSS is to create a set of webpages that features a common navigation bar and image galleries (AKA a quick template for a portfolio site). I highly suggest you start with w3schools examples, starting with <a href="https://www.w3schools.com/css/css_navbar.asp">Navigation Bar</a>, <a href="https://www.w3schools.com/css/css_image_gallery.asp">Image Gallery</a>, and <a href="https://www.w3schools.com/css/css_website_layout.asp">Website Layout.</a></p>
                 </div>
             </div>
         </body>
