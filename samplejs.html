@@ -273,7 +273,9 @@
                             } // color today's date
                             /* Adding the next 2 lines specifically so new code for the pop-up window will know which cell the user clicked on. The variable is set so that each onclick attribute is given the current date value in this for loop. We have to do this instead of using date in the onclick below it because by the time this whole for loop ends, date will always be 32. */
                             let clickDate = date;
+                            /* Setting up a variable to store whether the current cell contains an odd or even number. */
                             let oddEven = "";
+                            /* if-else statement that sets oddEven to even or odd by dividing by 2 and seeing if the remainder is equal to 0. */
                             if (clickDate % 2 === 0) {
                                 oddEven = "even";
                             } else {
