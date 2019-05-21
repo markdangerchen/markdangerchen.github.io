@@ -94,9 +94,14 @@
                     <p>I started by duplicating the <a href="samplecss.html">Sample CSS Page</a> and editing it, so some of the text is the same, but I did attempt to write informative text that describes what's happening to it. Focus on how the text is displayed, and check out the source code to see how it's done with Bootstrap.</p>
                 </div>
                 <div class="col">
-                    <p>We'll start with setting up the main body of the page in sort of a meta fashion. Bootstrap uses grids to set layout on a page. Think of this page as a bunch of stacked rows with 12 cells (or columns, technically) in each row. Each row can have elements that take up one or more of those 12 cells. Bootstrap is smart in that all you have to do is tell it how many columns of content to display and it'll intelligently figure out how to make the content span across multiple cells to fill up the whole row. You could, however, also specify exacly how many columns a particular element should take... Does that make sense? Pretend you have a table or grid that's invisible and content is place into one or more of the cells on particular rows of the grid.</p>
+                    <p>We'll start with setting up the main body of the page in sort of a meta fashion. Bootstrap uses grids to set layout on a page. <a href="https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp">See the w3schools page for a quick ref!</a> Think of this page as a bunch of stacked rows with 12 cells (or columns, technically) in each row. Each row can have elements that take up one or more of those 12 cells. Bootstrap is smart in that all you have to do is tell it how many columns of content to display and it'll intelligently figure out how to make the content span across multiple cells to fill up the whole row. You could, however, also specify exacly how many columns a particular element should take... Does that make sense? Pretend you have a table or grid that's invisible and content is place into one or more of the cells on particular rows of the grid.</p>
+                </div>
+            </div>
 
-                    <p>Need to insert a visual here for the grid system.</p>
+            <div class="row">
+                <div class="col">
+                    <div><img src="media/bootstrap-grid-equal-width.jpg" class="mx-auto d-block"></div>
+                    <div style="text-align: center;">Image from <a href="https://www.joomla-monster.com/documentation/template-tutorials/how-to-understand-bootstrap-grid-system">https://www.joomla-monster.com/documentation/template-tutorials/how-to-understand-bootstrap-grid-system</a></div>
                 </div>
             </div>
 
@@ -119,6 +124,9 @@
                     <h2>Basic text manipulation</h2>
 
                     <p>Most text elements can be thought of as existing in their own boxes. It's just that we don't see the boxes since they default to having no borders, etc. Each of the grid cells, using Bootstrap's <code>row</code> and <code>col</code> classes for <code>div</code> tags, I set this document up so that the <code>div</code> elements are to have a background color that's different than the main body of the page.</p>
+
+                    <div><img src="media/bootstrapgrid.jpg"></div>
+                    <div style="text-align: center;">Image from <a href="https://www.javatpoint.com/bootstrap-grid">https://www.javatpoint.com/bootstrap-grid</a></div>
                 </div>
                 <div class="col-md-4">
                     <p>Within a block of text, if you want to tell the web browser that a specific section of text should be treated differently, like say you want to style it a particular way, you can use the <code>&lt;span&gt;</code> tag and then give that tag an id or a class name and set the style for that element id or class or just style it inline with the <code>style=""</code> attribute.</p>
