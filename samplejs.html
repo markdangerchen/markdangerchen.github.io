@@ -125,7 +125,7 @@
 
                     <p>Javascript is an actual programming language where you define functions for the page to execute when something happens. Often when you want it to do something, you also want to throw in some conditional logic. For example, let's say your user clicks on a cell in a table that displays a calendar month, and you want some pop-up text to let the user know they clicked on the cell but you also want it to know whether the date is even or odd or if it is a weekend day rather than a weekday and intelligently display text in the pop-up depending on those conditions. If you didn't have Javascript, you'd have to define different class styles for each set of conditions and remember to make sure each cell has the right classes. Then you'd have to create a button in each cell or something and have the user click on the button for the pop-up to appear.</p>
 
-                    <p>With Javascript, you could instead have one class defined for every cell in the table and then add in an <code>onclick</code> event to whatever element you want clickable. The code will then execute and identify what's in the cell to determine if it's an odd or even number and which day it is. Then it'll throw a pop-up and the text will be different depending on what it detected.</p>
+                    <p>With Javascript, you could instead have one class defined for every cell in the table (or actually not even have to define a class) and then add in an <code>onclick</code> event to whatever element you want clickable. The code will then execute and identify what's in the cell to determine if it's an odd or even number and which day it is. Then it'll throw a pop-up and the text will be different depending on what it detected.</p>
                 </div>
             </div>
 
@@ -273,7 +273,13 @@
                             } // color today's date
                             /* Adding the next 2 lines specifically so new code for the pop-up window will know which cell the user clicked on. The variable is set so that each onclick attribute is given the current date value in this for loop. We have to do this instead of using date in the onclick below it because by the time this whole for loop ends, date will always be 32. */
                             let clickDate = date;
-                            cell.onclick = function () { alert("You clicked on " + clickDate + ", " + months[month] + " " + year); };
+                            let oddEven = "";
+                            if (clickDate % 2 === 0) {
+                                oddEven = "even";
+                            } else {
+                                oddEven = "odd";
+                            }
+                            cell.onclick = function () { alert("You clicked on " + clickDate + ", " + months[month] + " " + year + ", and it is an " + oddEven + " day."); };
                             cell.appendChild(cellText);
                             row.appendChild(cell);
                             date++;
