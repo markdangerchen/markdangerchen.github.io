@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sample page full of HTML code for BIMD 233</title>
+        <title>Sample page full of JS code for BIMD 233</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
  
@@ -14,11 +14,13 @@
 
         <style type="text/css">
             body {
+                /*
                 background: rgb(10, 7, 14);
                 background-image: url("media/darkwood.jpg");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 color: #111111;
+                */
             }
             /* Editing Bootstrap's default color of hover on dropdown menu item. */
             .navbar .dropdown-item:hover {
@@ -49,8 +51,7 @@
                 opacity: 1.0;
                 filter: alpha(opacity=100);
             }
-        </style>
-    
+        </style>    
     </head>
 
     <body>
@@ -137,33 +138,104 @@
                 <div class="col">
                     <h2>Samples</h2>
 
-                    <h3>Calendar</h3>
-
-                    <!-- Some Bootstrap classes to style the table quickly. -->
-                    <table class="table table-dark table-striped table-hover">
+                    <h3 id="monthAndYear"></h3>
+                    <table class="table table-bordered table-responsive-sm" id="calendar">
                         <thead>
-                            <tr>
-                                <th>This is a table</th>
-                                <th>Huzzah!</th>
-                            </tr>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="2">
-                                    <p>This table is styled completely with Bootstrap. It's super easy with just some class definitions for the whole table!</p>
-
-                                    <p>Most of the attributes for the table element have been deprecated with HTML5. In fact, most ways of styling text using HTML have been deprecated in favor of stylesheets, but modern browsers tend to be backwards compatible...</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <p>Again, there's quite a bit to CSS that you can do, and Bootstrap bundles them up into a common framework, so start looking at examples online for inspiration and then look at their source code or consult a good reference! With CSS, there's so much more flexibility to how things look than with just HTML. (Once we start JavaScript stuff, you'll then start changing how things <em>behave</em>, too.)</p>
-                                </td>
-                            </tr>
+            
+                        <tbody id="calendar-body">
+            
                         </tbody>
                     </table>
+            
                 </div>
+
             </div>
-        </body>
+        </div>
+
+        <script>
+            /* The basic calendar is copied from here https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d with some modifications and comments.
+
+            Javascript is denoted with the script block and can be placed either in the head or the body. I tend to either put it all in the head or all at the bottom of the body (or actually put it in a separate file named whatever.js and link to it like you'd link a stylesheet). Note: It's safe to declare variables and define functions within the head, but any functions that you invoke within the script block will execute as the page is loaded, so if it's in the head tag and the function tries to manipulate stuff in the body, it might not work since technically the stuff in the body doesn't yet exist.
+
+            There's a few ways to declare variables in JS. It used to be you would use the word "var" then the variable name to tell the script that you want to create a new variable, but, more recently, "let" was introduced to help developers scope their variables, and there's, as far as I can tell, very few cases where you'd want to use var instead of let now.
+            
+            So the next few lines define some variables for the script to use. Variables are like addresses or labels you want to use to name bits of information you want the script to remember. In the first case, we're creating the label "today" and then assigning it a value of today's date. The words "new Date()" is telling the script to run a built-in function that returns the current date. It's like asking "What's today's date?" and it "returns" or responds with today's current date.
+            
+            The other variables are other built-in functions that are based off the date. "today.getMonth()" for example runs the function "getMonth()" on the variable that we set with "today." Since we just set today to the current date, the getMonth function can tell us the current month. */
+            let today = new Date();
+            let currentMonth = today.getMonth();
+            let currentYear = today.getFullYear();
+
+            /* The variable "months" here is being set to what's called an "array." It's like taking a group of data and clumping them together and giving them one name, sort of like how the variable "The Beatles" references John, Paul, George, and Ringo. What's neat about arrays is that the variable also remembers which order you put the items in, so you can later refer to specific items in the array by position. */
+            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+            /* The monthAndYear variable next is using Javascript's way of identifying an HTML element (aka tag) by referencing whatever CSS id you've given a particular element. This identification then lets you manipulate the text within the tag. In other words, if you look through the HTML, you'll eventually find something with the id "monthAndYear." Whatever HTML element has that id will get returned by the "getElementById("monthAndYear") function and then stored in a variable also called "monthAndYear." In this case, it's a h3 tag that we're using as the label for the calendar. The word "document" is sort of like a built-in variable that references the current HTML page you're working on. */
+            let monthAndYear = document.getElementById("monthAndYear");
+
+            /* The next line tells the script that you're going to define a function or a command you want it to execute whenever you invoke a keyword or name that you're giving the function. In this case, we're giving the function the name "showCalendar." The "(month, year)" part tells the script to expect us to provide those two bits of info when we tell it to execute showCalendar. */
+            function showCalendar(month, year) {
+
+                let firstDay = (new Date(year, month)).getDay();
+                let daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+                let tbl = document.getElementById("calendar-body"); // body of the calendar
+
+                // clearing all previous cells
+                tbl.innerHTML = "";
+
+                // filling data about month and year in the page via DOM.
+                monthAndYear.innerHTML = months[month] + " " + year;
+
+                // creating all cells
+                let date = 1;
+                for (let i = 0; i < 6; i++) {
+                    // creates a table row
+                    let row = document.createElement("tr");
+
+                    //creating individual cells, filing them up with data.
+                    for (let j = 0; j < 7; j++) {
+                        if (i === 0 && j < firstDay) {
+                            let cell = document.createElement("td");
+                            let cellText = document.createTextNode("");
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                        }
+                        else if (date > daysInMonth) {
+                            break;
+                        }
+
+                        else {
+                            let cell = document.createElement("td");
+                            let cellText = document.createTextNode(date);
+                            if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                                cell.classList.add("bg-info");
+                            } // color today's date
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            date++;
+                        }
+
+
+                    }
+
+                    tbl.appendChild(row); // appending each row into calendar body.
+                }
+
+            }
+
+            /* Finally, after declaring variables and functions, let's execute the function so that the table that will be the calendar is drawn onto the page. */
+            showCalendar(currentMonth, currentYear);
+
+        </script>
     </body>
 </html>
