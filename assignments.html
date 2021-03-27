@@ -54,6 +54,15 @@
 
             <p>This course is heaviy focused on self-directed learning, where you have certain tasks to accomplish by specific due dates, but you may work faster and actually <strong>should strive to get ahead if you can</strong>. More material and resources can definitely be provided for any student(s) who wants to explore web tools more deeply. That said, the trick is that <strong>you will be working in groups</strong> so your pace will be somewhat constrained by how well your teammates and you support each other. Additionally, all of the groups will form a larger <strong>learning community</strong> where everyone helps each other with their individual learning goals.</p>
 
+            <p>For most of the assignments, the main process that is expected from students is to:</p>
+            <ul>
+                <li>read the sample page for the assignment,</li>
+                <li>view the source code for the sample page (right-click and View Page Source or hit F12) and then read the code and the comments within the code,</li>
+                <li>identify which web resources to consult to learn about the items that are required for the assignment, and</li>
+                <li>follow the web resources while working with teammates to complete the assignment.</li>
+            </ul>
+            <p>The main resource to use is <a href="https://w3schools.com">w3schools</a>, but there are A TON of other web resources that could help.</p>
+
             <p><strong>Each task has a certain number of points</strong> associated with it. For some of the tasks, it's just a binary: <em>did you do it or not in a timely manner?</em> For others, there's some wiggle room for how many points you receive, and receiving the maximum means that not only have you done the task but you've done it such that I can tell there was thought and care put into it (i.e., you checked the code for syntax errors, you left intelligible comments, etc.). For all of the group work, obviously, a lot will depend on the coordination of the group, but each student will be keeping a personal <strong>Learning Journal</strong> where they can indicate their thoughts on the work and how they could improve it. In fact, in many cases, good and detailed reflective writing in this journal is more important than just doing the task.</p>
 
             <p><strong>Reflective Learning Journal</strong> entries should be about one or two pages long and include:</p>
@@ -124,8 +133,9 @@
 
                                 <p><strong>Set up workflow and form teams</strong></p>
                                 <ul>
-                                    <li><strong>Set up GitHub Pages, Git, VSCode, CodePen, and general workflow (1 pt).</strong> Steps can be found in the Setting up a workflow document in the Instructions and Resources folder of our Google Shared Drive.</li>
+                                    <li><strong>Set up GitHub Pages, Git, VSCode, CodePen, and general workflow (1 pt).</strong> Basically, we'll be using github as a way to store and share files among teammates and VSCode as the main coding app. Steps can be found in the Setting up a workflow document in the Instructions and Resources folder of our Google Shared Drive.</li>
                                     <li><strong>Form teams (1 pt)</strong>, fill in a Team Plan/Contract (provided through Canvas), start using your team's Discord channel, and enter in your GitHub Pages URLs in the Google doc we'll be using as the portal page. We'll determine the groups using mojo, heavily influenced by your Discord introductions, but, if you want to work with someone in particular, be sure to let us know. Teams may use other communication mediums in addition to Discord, but we expect each student to post at least once once a week on the platform to keep the instructors and teammates updated on their work. For the team contract, just copy that Google doc into your team folder in Google Drive and fill it out.</li>
+                                    <li>Each teammate's github account should be added as contributors to all teammate's github repositories.</li>
                                 </ul>
                             </div>
                         </td>
@@ -141,22 +151,28 @@
                                 <ul>
                                     <li>The page must include these HTML tags:</li>
                                     <ul>
+                                        <li>declaring what type of document it is with the <code>&lt;html&gt;</code> tag,</li>
+                                        <li>marking of sections of the document for meta information about the document (<code>&lt;head&gt;</code>) and for the main content of the document (<code>&lt;body&gt;</code>),</li>
                                         <li>headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.),</li>
                                         <li>paragraph <code>&lt;p&gt;</code>,</li>
-                                        <li><code>&lt;div&gt;</code>,</li>
-                                        <li><code>&lt;span&gt;</code>,</li>
-                                        <li><code>&lt;strong&gt;</code>,</li>
-                                        <li><code>&lt;em&gt;</code>,</li>
-                                        <li><code>&lt;table&gt;</code>,</li>
-                                        <li>lists (<code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code>),</li>
-                                        <li>and image <code>&lt;img&gt;</code></li>
+                                        <li>which is different than a divider <code>&lt;div&gt;</code>,</li>
+                                        <li>and a specific <code>&lt;span&gt;</code> of text,</li>
+                                        <li>placing more weight on certain text with <code>&lt;strong&gt;</code>,</li>
+                                        <li>and emphasis <code>&lt;em&gt;</code>,</li>
+                                        <li><code>&lt;table&gt;</code> for structured display of information,</li>
+                                        <li>lists (<code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code>) and list items (<code>&lt;li&gt;</code>),</li>
+                                        <li>and images with the <code>&lt;img&gt;</code> tag, using the <em>attributes</em> <code>src="url"</code>, <code>alt="alternative text"</code>, mostly for screen readers, and <code>title="label here"</code> that show up on mouse hover</li>
                                     </ul>
-                                    <li>Refer to the <a href="samplehtml.html">Sample HTML Page</a> for examples.</li>
-                                    <li>Do this in iterations, where each student must contribute something that includes:</li>
+                                    <li>Refer to the <a href="samplehtml.html">Sample HTML Page</a> for examples and a lot more information about how HTML works. You can right-click on the page and View Page Source to see the code. Alternatively, you can also hit F12 to see a panel on the right hand side that shows a whole bunch of info about the page including a collapsed view of the source code. And, finally, a third way of seeing the code is to look at the Sample HTML page on the <a href="https://github.com/markdangerchen/markdangerchen.github.io">github repository for this course</a>. You could also save the page to your computer and then open it with VSCode.</li>
+                                    <li>After consulting the sample page, go to <a href="https://w3schools.com">w3schools</a> and look up each of the items in that list above and read those pages for lots of useful info about how to use those tags AND what they mean.</li>
+                                    <li>One student should start a page, add stuff along with comments (see below), and then save it and put it in their github repository.</li>
+                                    <li>A second student in the team should then grab the page from the first student's github, edit it, and put the edited file back into the first student's github.</li>
+                                    <li>Keep handing it off to a new teammate, saving it to the first student's github each time, until all teammates have had a chance to edit the page.</li>
+                                    <li>You can keep doing this, not necessarily in a specific order, over and over until all teammates are satisfied with their additions.</li>
+                                    <li>Each student should contribute the above items (although <code>html</code>, <code>head</code>, and <code>body</code> should only appear ONCE on the page), and each student should also include:</li>
                                     <ul>
-                                        <li><code>&lt;!-- A comment with purpose of new code and mention of the source or inspiration for added code --&gt;</code>, and the actual new code.</li>
-                                        <li>Edited code should also be <code>&lt;!-- commented --&gt;</code> on to detail changes.</li>
-                                        <li>Then the group commits the changes and pushes them to GitHub with proper commit comments.</li>
+                                        <li><code>&lt;!-- A comment with purpose of new code and mention of the source or inspiration for added code. --&gt;</code></li>
+                                        <li>Edited code should also be <code>&lt;!-- commented --&gt;</code> to detail any changes made from previous versions.</li>
                                     </ul>
                                 </ul>
 
@@ -172,13 +188,14 @@
                         <td><button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assnp0" data-toggle="collapse">more/less =</button>
                             <h5>Registering a Domain and Web Hosting</h5>
                             <div class="collapse" id="assnp0">
+                                <p>One of the things that you should learn how to do is to set up your own webspace and get your own domain name so you have somewhere to call home and to place all your actual web work. You'll be using this space for your individual projects instead of your GitHub Pages, which we're reserving for your team work.</p>
                                 <p><strong>Register domain name and get hosting:</strong></p>
                                 <ul>
-                                    <li>Get a $45 hosting account with Reclaim Hosting (who focus on empowering students with their own web presence that students then own and control absolutely), which comes with a free domain name registration! <a href="https://reclaimhosting.com/">https://reclaimhosting.com/</a> (Let us know if this is a hardship for you and we can try to find other options)</li>
+                                    <li>Get a $45 hosting account with Reclaim Hosting (who focus on empowering students with their own web presence that students then own and control absolutely), which comes with a free domain name registration! <a href="https://reclaimhosting.com/">https://reclaimhosting.com/</a> (Let us know if this is a hardship for you and we can try to find other options, but this course doesn't have required textbooks so, hopefully, this cost is okay.)</li>
                                     <li>After you register an account and get set up, you can visit your client portal at <a href="https://portal.reclaimhosting.com/clientarea.php">https://portal.reclaimhosting.com/clientarea.php</a></li>
                                     <li>Note: If you already have a domain name and hosting, you can skip the above steps, but let us know!</li>
-                                    <li><strong>Put the URL of your new website in a common Google doc we'll be using as the portal page (3 pts).</strong></li>
-                                    <li>We'll also provide a how-to guide in Canvas and Google!</li>
+                                    <li><strong>Put the URL of your new webspace in a common Google doc we'll be using as the portal page (3 pts).</strong></li>
+                                    <li>We'll provide a guide in Canvas and Google on how to do all this!</li>
                                 </ul>
 
                                 <p><strong>Familiarize yourself with cpanel:</strong></p>
@@ -200,7 +217,7 @@
                             <div class="collapse" id="assn2">
                                 <p><strong>Create a basic HTML + CSS page with a different student’s GitHub Pages page (5 pts).</strong></p>
                                 <ul>
-                                    <li>Same steps as above with the HTML page, basically. You should make a clone of the first page on the first student's GitHub Pages onto a different student's GitHub Pages and then work from there. Use the Sample Pages as a model for this iterative development. Refer to the <a href="samplecss.html">Sample CSS Page</a>, have all four students iterate off one another's work, and <strong>comment your code!</strong></li> 
+                                    <li>Follow the same steps as above with the HTML page, basically, but with a different student's github repository. You should make a clone of the first page on the first student's GitHub Pages onto a different student's GitHub Pages and then work from there. Use the Sample Pages as a model for this iterative development. Read the <a href="samplecss.html">Sample CSS Page</a> and its source code, have all students iterate off one another's work, and <strong>comment your code!</strong></li> 
                                     <li>The page must include at least:</li>
                                     <ul>
                                         <li>various ways to specify a style at different hierarchies:</li>
@@ -213,14 +230,23 @@
                                         <ul>
                                             <li>a specific tag like, say, you want all <code>&lt;a&gt;</code> tags to be styled in a particular way,</li>
                                             <li>only certain subsets of tags by using the <code>class=""</code> attribute in a tag and specifying <code>.class</code> in the stylesheet,</li>
+                                            <ul>
+                                                <li>A common use for a <code>class=""</code> attribute is to define different types of paragraphs <code>&lt;p&gt;</code>, for example.</li>
+                                            </ul>
                                             <li>or specific unique elements that need to be styled a certain way through using the <code>id=""</code> attribute and <code>#id</code> in the stylesheet.</li>
+                                            <ul>
+                                                <li>This is often done to name a specific element (e.g., a specific <code>&lt;div&gt;</code>) so that you can make it do something when clicked on, such as the expanding and collapsing of assignments that you see on this page. (Have you looked at the source code for this page, yet?)</li>
+                                            </ul>
                                         </ul>
                                         <li>various style changes:</li>
                                         <ul>
                                             <li>font size, weight, and treatment,</li>
                                             <li>position and alignment of elements,</li>
-                                            <li>manipulation of images,</li>
-                                            <li>and hover and visibility changes links or other elements</li>
+                                            <ul>
+                                                <li>(Making something centered is surprisingly finicky in HTML/CSS so see if you can find good resources on that specifically!)</li>
+                                            </ul>
+                                            <li>treatment of images (like width, height, etc.),</li>
+                                            <li>and using <em>selectors</em> such as <code>:hover</code> to change <code>visibility</code> for links or other elements</li>
                                         </ul>
                                     </ul>
                                 </ul>
@@ -237,7 +263,7 @@
                         <td><button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assnp1" data-toggle="collapse">more/less =</button>
                             <h5>Individual Project Idea</h5>
                             <div class="collapse" id="assnp1">
-                                <p>Each student will work on an individual ongoing project for the quarter. The <em>nature of the project is up to you</em>, but it must be done in <strong>HTML/CSS + JS (with or without Bootstrap and/or other frameworks)</strong>. It can be simple or complex, but it needs to be inspired by a strong vision for what the project is. Potential creations include portfolios, artwork, personal websites, etc. We'll use Google docs for the planning of these projects.</p>
+                                <p>Each student will work on an individual ongoing project for the quarter. The <em>nature of the project is up to you</em>, but it must be done in <strong>HTML/CSS + JS (with or without Bootstrap and/or other frameworks)</strong>. It can be simple or complex, but it needs to be inspired by a strong vision for what the project is. Potential creations include portfolios, artwork, a page for an organization you belong to, personal websites, etc. We'll use Google docs for the planning of these projects.</p>
 
                                 <p><strong>Create a new Google doc and write at least half of a page that describes:</strong></p>
                                 <ul>
@@ -259,10 +285,12 @@
 
                                 <p><strong>Create a Bootstrap version of the same page you've been working on, using a third student’s GitHub Pages page (5 pts).</strong></p>
                                 <ul>
-                                    <li>As above, refer to the <a href="samplebootstrap.html">Sample Bootstrap Page</a>, have all four students iterate off one another's work, and <strong>comment your code!</strong></li>
-                                    <li>Include:</li>
+                                    <li>As above, read and refer to the <a href="samplebootstrap.html">Sample Bootstrap Page</a> and its source code, have all students iterate off one another's work, and <strong>comment your code!</strong></li>
+                                    <li>Learn how the grid system works, and use it to structure your page. Then include:</li>
                                     <ul>
-                                        <li>navbar, grids, flexboxes, and other effects</li>    
+                                        <li>a navbar,</li>
+                                        <li>flexboxes,</li>
+                                        <li>and any other elements you want to play around with, like jumbotrons, etc.</li>    
                                     </ul>
                                 </ul>
 
@@ -278,12 +306,12 @@
                         <td><button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assnp2" data-toggle="collapse">more/less =</button>
                             <h5>Individual Project Layout and Plan</h5>
                             <div class="collapse" id="assnp2">
-                                <p>This assignment is meant for you to explore different options and document the process of narrowing down designs for your ongoing project. By the end of this assignment, you should have a good idea of what you'll be making for the rest of the quarter and how to go about doing that work.</p>
+                                <p>This assignment is meant for you to explore different options and document the process of narrowing down designs for your ongoing project. By the end of this assignment, you should have a good idea of what you'll be making for the rest of the quarter and how to go about doing that work. If you need inspiration for the different types of things you could include in your project, check out projects on <a href="https://codepen.io/trending">CodePen</a>, browse these <a href="https://www.freecodecamp.org/news/javascript-projects-for-beginners/">40 Javascript projects for beginners</a>, and see the <a href="https://www.w3schools.com/howto/default.asp">how-to demos on w3schools</a>.</p>
                                 
                                 <p>Tasks:</p>
                                 <ul>
-                                    <li><strong>Sketch out the <a href="https://careerfoundry.com/en/blog/ux-design/what-is-a-wireframe-guide/">wireframe</a> for your final project.</strong> You can do this with software or on paper that you scan or take photos of, but it should be presentable (so if you take a photo of a drawing, edit the photo so it's high contrast and is cropped correctly, etc.).</li>
-                                    <li><strong>Try some initial coding/styling and commenting.</strong> You should put your web files into your webspace (with Reclaim Hosting).</li>
+                                    <li><strong>Sketch out the <a href="https://careerfoundry.com/en/blog/ux-design/what-is-a-wireframe-guide/">wireframe</a> for your final project.</strong> You can do this with software (like with <a href="https://www.figma.com/">figma</a> or <a href="https://draw.io">draw.io</a>) or on paper that you scan or take photos of, but it should be presentable (so if you take a photo of a drawing, edit the photo so it's high contrast and is cropped correctly, etc.).</li>
+                                    <li><strong>Try some initial coding, styling, and commenting.</strong> You should put your web files into your webspace (e.g., on your Reclaim Hosting space).</li>
                                     <li><strong>Add a new section to your Individual Project Google doc write-up</strong> and include your sketches and the URL for your ongoing project. Also, include further thoughts on the project and what the plan is for moving forward.</li>
                                 </ul>
                             </div>
@@ -294,22 +322,24 @@
                     <tr>
                         <td>4</td>
                         <td><button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assn4" data-toggle="collapse">more/less =</button>
-                            <h5>Javascript Part I (Teams)</h5>
+                            <h5>Javascript (Teams)</h5>
                             <div class="collapse" id="assn4">
-                                <p>Ok, here's where it gets complicated fast. <strong>Javascript</strong> is a programming language and many consider the skill ceiling for it much higher than just HTML/CSS. You could study and use Javascript for years and still not feel like an expert. That means this course must focus on introducing you to the resources available for continued learning after the course is over. There's some fundamental components to any programming language that you should learn. Getting that foundation down will help with all programming languages in the future (and generally help you think logically in other disciplines as well!).</p>
+                                <p>Ok, here's where it gets complicated fast. <strong>Javascript</strong> is a programming language and many consider the skill ceiling for it much higher than just HTML/CSS. You could study and use Javascript for years and still not feel like an expert. That means this course must focus on introducing you to the resources available for continued learning after the course is over. There are some fundamental components to any programming language that you should learn. Getting that foundation down will help with all programming languages in the future (and generally help you think logically in other disciplines as well!).</p>
 
-                                <p>For this assignment, you'll follow the same process as the other group work assignments in creating a page on a fourth student's GitHub Pages, but it will be difficult just seeing from the code whether all students "get it." This is another reason why the <strong>Learning Journal</strong> is so important. Even if you don't fully understand, I want to see evidence that you're earnestly trying and that you have a plan for moving forward.</p>
+                                <p>For this assignment, you'll follow the same process as the other group work assignments in creating a page on a different student's GitHub Pages, but it will be difficult just seeing from the code whether all students "get it." This is another reason why the <strong>Learning Journal</strong> is so important. Even if you don't fully understand, I want to see evidence that you're earnestly trying and that you have a plan for moving forward.</p>
+
+                                <p>Hopefully, by now the course runs as a supportive community where we all help each other. If you get stuck, just post a question on our online discussion board, come to an optional session, or ask for help!</p>
                                 
-                                <p>As above, refer to the <a href="samplejs.html">Sample JS Page</a>, work iteratively together, <strong>comment code</strong>.</p>
+                                <p>As above, read and refer to the <a href="samplejs.html">Sample JS Page</a> and its source code, work iteratively together, <strong>comment code</strong>.</p>
                                 
                                 <p><strong>Create a page that does the following (5 pts):</strong></p>
                                 <ul>
-                                    <li>Declare a variable and set its value.</li>
-                                    <li>Use an array (AKA a table of variables stored as a set).</li>
-                                    <li>Create a function.</li>
-                                    <li>Throw in some conditional logic (AKA an if-then statement or a switch of some sort).</li>
-                                    <li>Create a loop that runs multiple times until some end condition is met.</li>
-                                    <li>Make some element execute the function when clicked on or is interacted with somehow by the user.</li>
+                                    <li>Declares a variable and set its value.</li>
+                                    <li>Uses an array (AKA a table of variables stored as a set).</li>
+                                    <li>Creates a function.</li>
+                                    <li>Tests conditional logic (AKA uses an if-then statement or a switch of some sort).</li>
+                                    <li>Creates a loop that runs multiple times until some end condition is met.</li>
+                                    <li>Makes some element execute the function when clicked on or is interacted with somehow by the user.</li>
                                 </ul>
 
                                 <p>Each student should also <strong>add to their Learning Journal a reflection on this assignment (3 pts)</strong>.</p>
@@ -337,22 +367,9 @@
                     <tr>
                         <td>5</td>
                         <td><button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assn5" data-toggle="collapse">more/less =</button>
-                            <h5>Javascript Part II (Teams)</h5>
+                            <h5>Web Animation (Teams)</h5>
                             <div class="collapse" id="assn5">
-                                <p>Continue practicing Javascript. This time we'll add techniques for grabbing data from both a local file and from an online datasource. More TBA.</p>
-
-                                <p>For this assignment, you can actually use the GitHub Pages account for the same student from Javascript Part I!</p>
-                                
-                                <p>As above, refer to the <a href="samplejsii.html">Sample JS II Page</a>, work iteratively together, <strong>comment code</strong>.</p>
-                                
-                                <p><strong>Add to your page code that does the following (5 pts):</strong></p>
-                                <ul>
-                                    <li>Create a table.</li>
-                                    <li>Grab data from a local file to put into the table.</li>
-                                    <li>Create another table or other framework template.</li>
-                                    <li>Grab data from an online datasource to put into the new table or other framework template that you've created to house the data.</li>
-                                    <li>Note that most of this will rely on previously practiced Javascript (variables, arrays, loops, etc.).</li>
-                                </ul>
+                                <p>Now that you've had a taste of HTML/CSS and Javascript, let's have some fun and play around with graphics and animation! More TBA!</p>
 
                                 <p>Each student should also <strong>add to their Learning Journal a reflection on this assignment (3 pts)</strong>.</p>
                                 <p>Finally, each student should copy the <strong>Team Evaluation Template in our Google Drive and submit answers via Canvas (2 pts)</strong>.</p>
