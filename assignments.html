@@ -148,11 +148,13 @@
                             <h5>HTML Practice (Teams)</h5>
                             <div class="collapse" id="assn1">
                                 <p><strong>Create basic HTML page with one student’s GitHub Pages page (5 pts).</strong></p>
+                                <p>HTML stands for hypertext markup language. It uses tags around content to let a web browser know what type of content it is, like this: <code>&lt;p&gt;Here's a paragraph!&lt;/p&gt;</code></p>
+                                <p>Tags often have attributes to specify specific properties. They appear in the opening tag as <code>keyword=""</code> like this: <code>&lt;p width="90%"&gt;Here's a paragraph that takes up 90% of the horizontal space!&lt;/p&gt;</code></p>
                                 <ul>
-                                    <li>The page must include these HTML tags:</li>
+                                    <li>The page you create must include these HTML tags:</li>
                                     <ul>
-                                        <li>declaring what type of document it is with the <code>&lt;html&gt;</code> tag,</li>
-                                        <li>marking of sections of the document for meta information about the document (<code>&lt;head&gt;</code>) and for the main content of the document (<code>&lt;body&gt;</code>),</li>
+                                        <li>declaring what type of document it is with the <code>&lt;!DOCTYPE&gt;</code> and <code>&lt;html&gt;</code> tags,</li>
+                                        <li>marking of sections of the document for invisible, meta information about the document (<code>&lt;head&gt;</code>) and for the main user-viewable content of the document (<code>&lt;body&gt;</code>),</li>
                                         <li>headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.),</li>
                                         <li>paragraph <code>&lt;p&gt;</code>,</li>
                                         <li>which is different than a divider <code>&lt;div&gt;</code>,</li>
@@ -161,6 +163,7 @@
                                         <li>and emphasis <code>&lt;em&gt;</code>,</li>
                                         <li><code>&lt;table&gt;</code> for structured display of information,</li>
                                         <li>lists (<code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code>) and list items (<code>&lt;li&gt;</code>),</li>
+                                        <li>anchor (<code>&lt;a&gt;</code>) and the <code>href=""</code> attribute to link to webpages and other things,</li>
                                         <li>and images with the <code>&lt;img&gt;</code> tag, using the <em>attributes</em> <code>src="url"</code>, <code>alt="alternative text"</code>, mostly for screen readers, and <code>title="label here"</code> that show up on mouse hover</li>
                                     </ul>
                                     <li>Refer to the <a href="samplehtml.html">Sample HTML Page</a> for examples and a lot more information about how HTML works. You can right-click on the page and View Page Source to see the code. Alternatively, you can also hit F12 to see a panel on the right hand side that shows a whole bunch of info about the page including a collapsed view of the source code. And, finally, a third way of seeing the code is to look at the Sample HTML page on the <a href="https://github.com/markdangerchen/markdangerchen.github.io">github repository for this course</a>. You could also save the page to your computer and then open it with VSCode.</li>
@@ -247,7 +250,11 @@
                                                 <li>(Making something centered is surprisingly finicky in HTML/CSS so see if you can find good resources on that specifically!)</li>
                                             </ul>
                                             <li>treatment of images (like width, height, etc.),</li>
-                                            <li>and using <em>selectors</em> such as <code>:hover</code> to change <code>visibility</code> for links or other elements</li>
+                                            <li>and using <em>selectors</em> such as <code>:hover</code> to change <code>visibility</code> for links or other elements.</li>
+                                        </ul>
+                                        <li>In general, you want to start using styles to define how different elements on your page look and stop using HTML attributes.</li>
+                                        <ul>
+                                            <li>For example, start doing this: <code>&lt;table style="width: 90%; border: 2px;"&gt;</code> instead of: <code>&lt;table width="90%" border="2"&gt;</code></li>
                                         </ul>
                                     </ul>
                                 </ul>
@@ -287,7 +294,7 @@
                                 <p>Tasks:</p>
                                 <ul>
                                     <li><strong>Sketch out the <a href="https://careerfoundry.com/en/blog/ux-design/what-is-a-wireframe-guide/">wireframe</a> for your final project.</strong> You can do this with software (like with <a href="https://www.figma.com/">figma</a> or <a href="https://draw.io">draw.io</a>) or on paper that you scan or take photos of, but it should be presentable (so if you take a photo of a drawing, edit the photo so it's high contrast and is cropped correctly, etc.).</li>
-                                    <li><strong>Try some initial coding, styling, and commenting.</strong> You should put your web files into your webspace (e.g., on your Reclaim Hosting space).</li>
+                                    <li><strong>Try some initial coding, styling, and commenting.</strong> If you can, put your web files into your webspace (e.g., on your Reclaim Hosting space). You can do this in several ways. The easiest is to go through cpanel and upload it with the File Manager. Another way would be to link VSCode to your hosting site and have it automatically save files there. If you can't figure it out in time for this assignment due date, don't sweat it. We'll go over it in class and there's still a couple of weeks before you actually have to have something on your site.</li>
                                     <li><strong>Add a new section to your Individual Project Google doc write-up</strong> and include your sketches and the URL for your ongoing project. Also, include further thoughts on the project and what the plan is for moving forward.</li>
                                 </ul>
                             </div>
