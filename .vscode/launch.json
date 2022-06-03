@@ -8,8 +8,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open samplejs.html",
-            "file": "d:\\Cloud\\Github\\markdangerchen.github.io\\samplejs.html"
+            "name": "Open recap.html",
+            "file": "d:\\Cloud\\Github\\markdangerchen.github.io\\test\\recap.html"
         }
     ]
 }
