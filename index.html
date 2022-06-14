@@ -1,497 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>UWB BIMD 233 Web Design Syllabus+Info</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-        <!-- Bootstrap 4 includes as of March 18, 2021: -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <!-- End Bootstrap 4 includes -->
 
-        <style type="text/css">
-            .navbar .dropdown-item:hover {
-                background-color:gray;
-            }
-            a {
-                font-weight: bold;
-            }
-            .name {
-                font-weight: bold;
-            }
-            .rank {
-                font-style: italic;
-            }
-        </style>
+<head>
+    <title>UWB BIMD 233 Web Design Syllabus+Info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    <body>
+    <!-- Bootstrap 4 includes as of March 18, 2021: -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- End Bootstrap 4 includes -->
 
-        <nav class="pl-md-5 navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-            <!-- Bootstrap's "brand" class where you can put in a logo or just some text... -->
-            <a class="navbar-brand" href="https://markdangerchen.github.io/">BIMD 233 Web Design</a>
-            <!-- The button below is to make it so that when the width of the browser window is too small, the menu doesn't appear all wonky and instead just collapses into a hamburger menu. -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Syllabus+Info</a></li>
-                    <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Sample Pages</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="samplehtml.html">Sample HTML</a>
-                            <a class="dropdown-item" href="samplecss.html">Sample CSS</a>
-                            <a class="dropdown-item" href="samplebootstrap.html">Sample Bootstrap</a>
-                            <a class="dropdown-item" href="samplejs.html">Sample JS</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="container" style="margin-top:70px;">
-            <h1>UWB BIMD 233 Web Design Syllabus+Info</h1>
-            
-            <p>Welcome to UW Bothell's BIMD 233 Fundamentals of Web Media Technology (AKA Web Design) course with Dr. Mark Chen! Here you'll find details about the course, the main assignment schedule, and resources to help complete the assignments.</p>
+    <style type="text/css">
+        .navbar .dropdown-item:hover {
+            background-color: gray;
+        }
 
-            <div class="row">
-                <div class="col-xl-2 bg-dark">
-                    <h3 class="text-right text-white">Instructors</h3>
-                </div>
-                <div class="col-xl-10 border" id="instructors">
-                    <p><span class="name" style="font-size: 1.1em;">Dr. Mark Chen</span>, <span class="rank">Professor</span>, email through Canvas<br>
-                        <span class="name">Robert Castillo</span>, <span class="rank">Peer Facilitator</span>, email through Canvas<br>
-                        <strong>How to email:</strong> 1. write a relevant subject line, 2. get our names and titles right, 3. provide context so we know which course and issue you're talking about, and 4. sign it so we know who you are.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-2 bg-dark">
-                    <h3 class="text-right text-white">Description and Tech</h3>
-                </div>
-                <div class="col-xl-10 border">
-                        <button type="button" class="btn btn-sm btn-outline-info float-right mt-1 ml-2" data-toggle="collapse" data-target="#desc">more/less =</button>
-                        <p>This course will introduce students to web design and crafting the <em>look and feel</em> of webpages using <strong>HTML/CSS and Javascript</strong>. </p>
+        a {
+            font-weight: bold;
+        }
 
-                    <div class="collapse" id="desc">
-                        <p>The learning approach is not like a traditional exercise-focused course, and there will be no lectures or quizzes. Instead, a heavy emphasis will be placed on <strong>self-directed learning and <a href="https://en.wikipedia.org/wiki/Connected_learning">connected learning</a></strong> models, where students are expected to invest in their own learning processes, identifying areas of strengths and weaknesses and learning how to find resources that complement those aspects of their learning profiles to support them for success. There's a deep well of expertise to acquire regarding web design, so the course must focus on <em>preparing students for continued learning</em> beyond this one course. Additionally, these skills in self-assessment and assembling the right resources for success (AKA <a href="https://wp0.vanderbilt.edu/cft/guides-sub-pages/metacognition/">metacognition</a> and <a href="https://digital.lib.washington.edu/researchworks/handle/1773/16275?show=full">sociomaterial expertise</a>) should transfer to other learning topics.</p>
-                            
-                        <p>Students will form a <strong>studio-style learning community</strong>, tasked with <em>learning along with and supporting their peers</em> while working on specific assignments that are relatively freeform in content and purpose. Many examples of existing code will be given for students to mimic in order to learn specific techniques and syntax, but the emphasis for this course will be to cover general design processes while planning out and creating logical web flows through human-centered design.</p>
-                            
-                        <p>Final projects will be to <strong>hand-code a portfolio website, a work of art using HTML/CSS, or another project</strong> of the student's choosing, working with the instructor to scope out and plan the project.</p>
+        .name {
+            font-weight: bold;
+        }
 
-                        <h4>Learning Objectives</h4>
-                        <p>By the end of the course, students will be able to:</p>
+        .rank {
+            font-style: italic;
+        }
+    </style>
 
-                        <ul>
-                            <li>Understand history of web technologies and how the internet works.</li>
-                            <li>Understand the different underlying languages in making a webpage, including the purpose for HTML, CSS, and Javascript.</li>
-                            <li>Engage in responsive web design with the popular CSS framework, Bootstrap.</li>
-                            <li>Program at a beginner level in Javascript for conditional web behaviors.</li>
-                            <li>Use iterative processes for working on a team using GitHub.</li>
-                            <li>Register a domain and set up a personal webspace with a hosting company.</li>
-                            <li>Develop a clear statement of intent for design or an artistic vision for creative work.</li>
-                            <li>Prepare images and other media for the web.</li>
-                            <li>Practice strong teamwork and support skills in a studio environment.</li>
-                            <li>Assemble a network of resources for continued learning.</li>
-                        </ul>
+</head>
 
-                        <h4>Required and Recommended Tech</h4>
+<body>
 
-                        <p><strong>Canvas</strong> (mostly for email, grading, and keeping track of assignment deadlines)<br>
-                            <strong>Google Shared Drive</strong> (for collaborative working drafts, etc. and individual reflections)<br>
-                            <strong>Discord</strong> (for online discussion and group communication)<br>
-                            <strong>Perusall</strong> (for collaborative note taking of course readings)<br>
-                            <strong>GitHub</strong> (for collaborative web work and hosting assignments)<br>
-                            <strong>Visual Studio Code</strong> (recommended app to code with)<br>
-                            <strong>CodePen</strong> (awesome online coding environment with a strong community)<br>
-                            <strong>Trello</strong> (project management tool)</p>
-                        <p><strong>Note:</strong> This course depends on students' ability to be agile and communicative with each other and the instructors. Keep teammates informed at all times. Also, please regularly check the Discord server and Canvas announcements if you don't have notifications turned on.</p>
-                        <p>Thanks for reading the syllabus. I know it’s a lot, but this is important stuff. If you email me using the format outlined in a later part of this syllabus, I’ll give you 2 extra credit points.</p>
+    <nav class="pl-md-5 navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <!-- Bootstrap's "brand" class where you can put in a logo or just some text... -->
+        <a class="navbar-brand" href="https://markdangerchen.github.io/">BIMD 233 Web Design</a>
+        <!-- The button below is to make it so that when the width of the browser window is too small, the menu doesn't appear all wonky and instead just collapses into a hamburger menu. -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Syllabus+Info</a></li>
+                <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Sample Pages</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="samplehtml.html">Sample HTML</a>
+                        <a class="dropdown-item" href="samplecss.html">Sample CSS</a>
+                        <a class="dropdown-item" href="samplebootstrap.html">Sample Bootstrap</a>
+                        <a class="dropdown-item" href="samplejs.html">Sample JS</a>
                     </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-2 bg-dark">
-                    <h3 class="text-right text-white">Assignments and Grading</h3>
-                </div>
-                <div class="col-xl-10 border">
-                    <p>This course is heavily focused on self-directed learning, where you have certain tasks to accomplish by specific due dates, but you may work faster and actually <strong>should strive to get ahead if you can</strong>. More material and resources can definitely be provided for any student(s) who wants to explore web tools more deeply. That said, the trick is that <strong>you will be working in groups</strong> so your pace will be somewhat constrained by how well your teammates and you support each other. Additionally, all of the groups will form a larger <strong>learning community</strong> where everyone helps each other with their individual learning goals.</p>
-
-                    <button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assignments" data-toggle="collapse">less/more =</button>
-                    <h3>Assignment Schedule</h3>
-
-                    <p>Specific detail can be found on the <a href="assignments.html">Assignments Page</a>.</p>
-            
-                    <table class="collapse show table table-striped table-bordered" id="assignments">
-                        <thead class="thead-dark">
-                            <th>ID</th>
-                            <th>Assignment</th>
-                            <th>Due Date</th>
-                            <th class="text-right">Points</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>CE</td>
-                                <td>Community Engagement</td>
-                                <td>ongoing</td>
-                                <td class="text-right">15</td>
-                            </tr>
-                            <tr>
-                                <td>AR</td>
-                                <td>Annotating Readings</td>
-                                <td>weekly</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                            <tr>
-                                <td>0</td>
-                                <td>Setting Up Workflow and Forming Teams</td>
-                                <td>Wk2: Thurs, April 7</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>HTML Practice (Teams)</td>
-                                <td>Wk3: Thurs, April 14</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                            <tr>
-                                <td>P0</td>
-                                <td>Registering a Domain and Web Hosting</td>
-                                <td>Wk4: Thurs, April 21</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Cascading Style Sheets (Teams)</td>
-                                <td>Wk5: Thurs, April 28</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                            <tr>
-                                <td>P1</td>
-                                <td>Individual Project Idea</td>
-                                <td>Wk6: Tues, May 3</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td>P2</td>
-                                <td>Individual Project Layout and Plan</td>
-                                <td>Wk7: Tues, May 10</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Bootstrap CSS Framework (Teams)</td>
-                                <td>Wk7: Thurs, May 12</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                            <tr>
-                                <td>P3</td>
-                                <td>Individual Project Demo</td>
-                                <td>Wk9: Tues, May 24</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Javascript (Teams)</td>
-                                <td>Wk10: Thurs, June 2</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Web Animation extra credit (Individual or Teams)</td>
-                                <td>Wk10: Thurs, June 2</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td>P4</td>
-                                <td>Individual Project Final</td>
-                                <td>Wk11: Tues, June 7</td>
-                                <td class="text-right">10</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#grading" data-toggle="collapse">more/less =</button>
-                    <h3>Grading</h3>
-        
-                    <table class="collapse table table-striped table-bordered table-sm w-75 ml-5" id="grading">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th style="width: 100px;">Points</th>
-                                <th style="width: 100px;">Grade Point</th>
-                                <th style="width: 100px;">Points</th>
-                                <th>Grade Point</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>99+</td>
-                                <td>4.0</td>
-                                <td>80</td>
-                                <td>3.0</td>
-                            </tr>
-                            <tr>
-                                <td>97-98</td>
-                                <td>3.9</td>
-                                <td>79</td>
-                                <td>2.9</td>
-                            </tr>
-                            <tr>
-                                <td>95-96</td>
-                                <td>3.8</td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                            <tr>
-                                <td>93-94</td>
-                                <td>3.7</td>
-                                <td>70</td>
-                                <td>2.0</td>
-                            </tr>
-                            <tr>
-                                <td>91-92</td>
-                                <td>3.6</td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                            <tr>
-                                <td>89-90</td>
-                                <td>3.5</td>
-                                <td>60</td>
-                                <td>1.0</td>
-                            </tr>
-                            <tr>
-                                <td>87-88</td>
-                                <td>3.4</td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                            <tr>
-                                <td>85-86</td>
-                                <td>3.3</td>
-                                <td>57</td>
-                                <td>0.7</td>
-                            </tr>
-                            <tr>
-                                <td>83-84</td>
-                                <td>3.2</td>
-                                <td>0-56</td>
-                                <td>0.0</td>
-                            </tr>
-                            <tr>
-                                <td>81-82</td>
-                                <td>3.1</td>
-                                <td colspan="2">^ Before this happens, please come talk to me.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-          
-            <div class="row">
-                <div class="col-xl-2 bg-dark">
-                    <h3 class="text-right text-white">Resources</h3>
-                </div>
-                <div class="col-xl-10 border">
-                    <button type="button" class="btn btn-sm btn-outline-info float-right mt-1 ml-2" data-target="#resources" data-toggle="collapse">more/less =</button>
-                    <p>In addition to the general web tutorials and where to acquire the tools for the course on the <a href="resources.html">Resources Page</a>, be sure to look at the <strong>Sample Pages</strong> throughout the quarter!</p>
-
-                    <div class="collapse" id="resources">
-                        <p>The intent is that you'd go to each page and right-click on an empty portion of the page to <strong>View Source OR hit F12</strong> in your browser to view the code. Then you can see examples of how certain tags work in action and start to understand proper syntax and such.</p>
-                        
-                        <p>Each page gets progressively more complex, the first one being relatively simple HTML. There's a lot more to each of the languages, though, so these pages are just meant as the first step and bare minimum you're expected to understand by the end of the quarter. If you want to learn how to do other things not covered (like, for example, draw shapes and animate them), there're other ways to find that info out once you have the basics down.</p>
-                
-                        <p>The course is meant to introduce the basics and then teach you how to find more information on your own. This is actually how I run almost all of my courses. I'm more interested in helping people figure out how to continue improving or learning after taking one of my courses than I am in getting them to do specific things just for the course.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-2 bg-dark">
-                    <h3 class="text-right text-white">Course and UWB Info</h3>
-                </div>
-                <div class="col-xl-10 border">
-                    <button type="button" class="btn btn-sm btn-outline-info float-right mt-1" data-target="#info" data-toggle="collapse">more/less =</button>
-                    <p>General but Important Info...</p>
-                    <div class="collapse" id="info">
-                        <h4>UWB's COVID info: <a href="https://www.uwb.edu/coronavirus/covid-19-communications">https://www.uwb.edu/coronavirus/covid-19-communications</a></h4>
-                        <ul>
-                            <li>Wearing masks will become optional on the UW Bothell campus starting March 28. However, masks are strongly recommended indoors for at least the first two weeks of spring quarter. For those who choose to continue wearing a mask for a variety of reasons, we welcome and respect your choice.</li>
-                            <li>With masks becoming optional, we will discontinue the practice of designating eating-only areas in our public spaces. However, for those who would like such an area as we return for spring quarter, the North Creek Event Center will continue as a designated eating space, with appropriate distancing, until April 30. We ask you to be mindful of considerate practices such as cleaning your space after use, wherever you choose to eat.</li>
-                            <li>Free surgical masks will continue to be available through dispensers in buildings across campus.</li>
-                            <li>The <a href="https://www.washington.edu/coronavirus/testing/">Husky Coronavirus Testing program</a> (a voluntary research study) will continue to offer free coronavirus testing kits to the campus community in the Commons Lobby of Commons Hall (UW2) Mondays through Fridays from 10 a.m. to 2 p.m. Please note that HCT staff will not be available onsite during spring break, March 19-27.</li>
-                        </ul>
-
-                        <h4>General Teaching Statement</h4>
-                        <p>First, I believe I have a responsibility to support you for lifelong success and happiness. The way I've designed this course is in line with this guiding principle, from the technologies we use to how I accept revisions for almost all assignments. Furthermore, the course is initially destabilizing by design because I want you to practice finding answers, asking when you need help, and learning through trying something, receiving feedback, and trying again until you excel. I have a tiny blip of a chance to affect you positively in the long scheme of things so I've designed this course to encourage agility, independence, curiosity, and perseverance so that hopefully I’ve helped you be successful long after this course is over.</p>
-                        
-                        <p>Second, I am a scholar and designer who believes in equity, justice, and maximizing agency for everyone. But I don't have all the answers, and I am on a lifelong journey to learn as well. Additionally, I try my hardest to decentralize power and to treat you as equals, but there are inherent dynamics that will always exist. I will endeavor to never exercise that power unless it is ethical to do so.</p>
-                        
-                        <p>Third, learning is social. This is the foundational principle of my PhD research in education and informal learning. I encourage you to communicate with each other, with the peer facilitators, and with me as much as possible, even if all you have to say is just a small status update. You want to develop "swift trust" and to learn by asking and reasoning aloud and by watching others.</p>
-
-                        <h4>Late Policy</h4>
-                        <p>Most of the activities for my courses are done in teams or have certain milestones requiring you give and receive feedback from peers. As such, it’s quite difficult to get the same experience if you turn in late assignments. They become meaningless if they arrive after someone was available to provide you with feedback. Meaningless work gets a zero grade. Late, but still meaningful, work gets at least partial credit, and you must let us know that you are still planning on doing it. If it’s extremely insightful or proves that you’ve been thinking about the course topics deeply, full points are still possible.</p>
-                        
-                        <p>Also, extreme circumstances sometimes do occur, so if that happens, please let me know and we can figure something out. If you know something will come up during the quarter, let us know earlier rather than later so we can figure out how you can still participate.</p>
-                        
-                        <p>That said, revisions are usually encouraged and actually expected if you receive comments or suggestions for edits. In other words, your best stab at something by the due date is way better than not turning something in on time. Most of the time, you’ll just get comments and can submit revisions to be regraded. You must, however, let us know what’s going on and what your expectations are! So let us know what you’re thinking!</p>
-
-                        <h4>Attendance and Zoom</h4>
-                        <p>You are expected to be there during class times, but we will not be taking attendance to allow for anyone who needs to be absent for any given week (due to COVID or other reasons). If you cannot make it, you are still expected to let us and your team know!</p>
-                        
-                        <p>Any Zoom class sessions might be recorded. The recording will capture the presenter’s audio, video, and computer screen. Student audio and video will be recorded if they share their computer audio and video during the recorded session. The recordings will be accessible to students enrolled in the course to review materials. Normally, these recordings will not be shared with or accessible to the public.</p>
-                        
-                        <p>The University and Zoom have FERPA-compliant agreements in place to protect the security and privacy of UW Zoom accounts. Students who do not wish to be recorded should:</p>
-                        <ul>
-                            <li>Change their Zoom screen name to hide any personal identifying information such as their name or UW Net ID, and</li>
-                            <li>Not share their computer audio or video during their Zoom sessions.</li>
-                        </ul>
-                        
-                        <p>All that said, you are still highly encouraged to share your video when appropriate. A lot of online community and <em>presence</em> research shows that it is harder to "be social" through online forms of communication since people miss out on gesture, body language, facial expressions, tonal changes, etc., but one way to mitigate this at least a little is to share video and audio. But it is entirely up to you whether you do. If not, there are alternatives such as using a filter (e.g., <a href="https://snapcamera.snapchat.com/download/">Snap Camera</a>) or <a href="https://support.zoom.us/hc/en-us/articles/201363203-Customizing-your-profile">putting up a photo as your profile image</a>. If you are simply self-conscious about how you look, one solution would be to <a href="https://support.zoom.us/hc/en-us/articles/115001077226-Hiding-or-showing-my-video-on-my-display">turn off your self-view in Zoom</a>, which has been shown to alleviate feeling like everyone is watching.</p>
-
-                        <h4>Online Communication</h4>
-                        <p>Allow for mistakes. Despite the best intentions, sometimes you might be hurt by something that someone in the course says. Please talk to me about this, as I can help resolve the conflicts. Remember that most students, and humans in general, are clueless and that we don’t usually intend to be hurtful. Never ascribe spite when it’s more likely incompetence or cluelessness!</p>
-                        
-                        <p>Respect privacy. Please don’t share people’s work or email messages. What happens in this class, stays in this class.</p> 
-                        
-                        <p>Write well. Be clear and concise, use good spelling and grammar. Stay on topic. To check clarity, read your message aloud to yourself before sending it.</p> 
-                        
-                        <p>As a general rule, I will not message or respond to students on Slack / Discord or through other means after 9 pm, so if you want to reach me and want a reply that day, please be sure to message me well in advance of that evening. Please write to me on my university email account for any messages that are super important and/or that you do not wish to place on Discord so that we can keep a good record of the messages (and to ensure I receive them because DMs on Discord can sometimes get lost!).</p>
-                        
-                        <p>In addition, advising staff in the UW Bothell’s Schools of IAS and STEM will have access to Canvas, Discord, and other communication tools used in courses as a means to support and mitigate issues if any arise.</p>
-                        
-                        <p>I take on different roles in my relations with students. I am generally your friend and care about you, but I am also your professor, so keep that in mind in your communications with me.</p>
-                        
-                        <h4>A Note on Stress</h4>
-                        <p>Success in this course depends heavily on your personal health and wellbeing. Recognize that stress is an expected part of the college experience, and it often can be compounded by unexpected setbacks or life changes outside the classroom. And let’s be realistic. Life absolutely sucks for most people right now. Stress is a perfectly natural response to world-altering events. If you somehow have made it through the past year completely unaffected, realize that most of your classmates were not so lucky. Some of them may have lost friends or family, have lost their jobs, have been hospitalized, have extra responsibilities such as caring for parents or grandparents, or are otherwise dealing with things that make them perform less than optimally.</p>
-                        
-                        <p>That said, your other instructors and I strongly encourage you to reframe challenges as an unavoidable pathway to success. Reflect on your role in taking care of yourself throughout the term, before the demands of exams and projects reach their peak.</p>
-                        
-                        <p>You do not owe me or your teammates personal information about your situation. It is up to you what you choose to share with your team that is personal in nature; however, do let your team know anything that will affect projects (for example, if you’ll be late on a deliverable, you should let your team know that you’re running late, but you’re not obligated to tell them why). From the other end of things, if others on your team give you bad news about their own status, don’t ask for personal information; let your teammates choose whether to volunteer anything additional, don’t pressure them to divulge, and respect their decision.</p>
-                        
-                        <p>Please DO feel free to reach out to me about any difficulty you may be having that may impact your performance in this course as soon as it occurs and before it becomes unmanageable. And you are always welcome to talk to me about whatever you like, whether it’s personal, professional, or a combination. Additionally your academic advisor and many <a href="http://www.uwb.edu/studentservices/counseling">other support services on campus</a> stand ready to assist you if you need/want.</p>
-
-                        <p>Again, thanks for reading this syllabus. I know it’s a lot, but it’s important. If you email me with your name, this course number, and an image of a cat, you’ll get 2 extra credit points. If you email me later in the quarter asking for help and the answer is in the syllabus, I’ll respond with an image of a cat.</p>
-                        
-                        <h4>General Student Conduct</h4>
-                        <p>The University of Washington Student Conduct Code (WAC 478-121) defines prohibited academic and behavioral conduct and describes how the University holds students accountable as they pursue their academic goals. Allegations of misconduct by students may be referred to the appropriate campus office for investigation and resolution. More information can be found online at <a href="https://www.washington.edu/studentconduct/">https://www.washington.edu/studentconduct/</a></p>
-
-                        <p>You are responsible for knowing what constitutes a violation of the University of Washington Student Code, and you will be held responsible for any such violations whether they were intentional or not.</p>
-                        
-                        <h4>Academic Integrity</h4>
-                        <p>Please see the UW Bothell General Catalog, the documents you signed upon admission to IAS, and these <a href="https://www.uwb.edu/studentaffairs/studentconduct">policy statements</a> for crucial information regarding academic integrity. The library also has <a href="https://guides.lib.uw.edu/friendly.php?s=bothell/ai">useful resources</a> for you to explore. You are responsible for knowing what constitutes a violation of the University of Washington Student Code regardless of your intent. Make sure you know how to properly cite any ideas or words you have taken from outside sources.</p>
-
-                        <p>Work of any kind (including written, video, audio, performance, artistic, etc.) produced outside of this course may not be submitted for credit without first discussing it with your instructor.  In most circumstances, work produced for one course may not be submitted for another course.</p>
-
-                        <h4>Navigate</h4>
-                        <p>There are many registration deadlines that come quickly during the quarter--for instance, a decision to drop a class. As your professor, part of my job is to communicate any concerns I may have about your academic performance to your advisors. This is meant to better connect you with support resources before it is too late. UW Bothell utilizes the Navigate Student Success Management system to allow me to share such feedback with your advisors should I feel such communication is needed.  In addition, your advisors may request that I submit a <a href="https://docs.google.com/spreadsheets/d/1VEPJbAUKeeQ0I-aAHTQS8Rh_GYPPiq3wDt5JKsu9tCQ/edit#gid=0">progress report</a> on your behalf. These communications remain confidential between me and your advisors, but will provide them up-to-date information related to your assignments, academic progress, and participation. Using Navigate to alert advisors about your academic progress  will both help advising staff to know when you might need support and will prompt me to reflect on your work and make me think about what I can do to help you succeed in this class and at UW Bothell.</p>
-
-                        <h4>Access and Accommodations</h4>
-                        <p>Your experience in this class is important to us, and it is the policy and practice of the University of Washington to create inclusive and accessible learning environments consistent with federal and state law. If you experience barriers based on disability, please seek a meeting with Disability Resources for Students (DRS) to discuss and address them. You may complete the New Student Application in this link <a href="https://www.uwb.edu/studentaffairs/drs">https://www.uwb.edu/studentaffairs/drs</a>, and DRS will contact you. If you have already established accommodations with DRS, please communicate your approved accommodations to your instructor at your earliest convenience so we can discuss your needs in this course.</p>
-
-                        <p>DRS offers resources and coordinates reasonable accommodations for students with disabilities. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS. If you have not yet established services through DRS, but have a temporary or permanent disability that requires accommodations (this can include but not limited to; mental health, attention-related, learning, vision, hearing, physical or health impacts), you are welcome to contact DRS at 425.352.5307 (Voice and Relay) or rosal@uw.edu.</p>
-                            
-                        <p>You may find more information on the Disability Resources for Students website.</p>
-
-                        <p>Acts of academic misconduct may include but are not limited to:</p>
-                        <ul>
-                            <li>Cheating (working collaboratively on quizzes/exams and discussion submissions, sharing answers and previewing quizzes/exams)</li>
-                            <li>Plagiarism (representing the work of others as your own without giving appropriate credit to the original author(s))</li>
-                            <li>Unauthorized collaboration (working with each other on assignments)</li>
-                        </ul>
-                        
-                        <h4>Religious Observance</h4>
-                        <p>It is the policy of University of Washington to reasonably accommodate students’ religious observances in accordance with <a href="https://apps.leg.wa.gov/rcw/default.aspx?cite=28B.137.010">RCW 28B.137.010</a>.</p>
-                        
-                        <p>Washington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW’s policy, including more information about how to request an accommodation, is available at <a href="https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/">Religious Accommodations Policy</a>. Accommodations must be requested within the first two weeks of this course using the <a href="https://registrar.washington.edu/students/religious-accommodations-request/">Religious Accommodations Request form</a>.</p>
-                        
-                        <h4>Parenting Student Resources</h4>
-                        <p>Parenting Students are encouraged to look at the resources on the <a href="https://www.uwb.edu/titleix/students-who-are-parents">Parent Resources website</a>.  In addition, parenting students may apply for financial assistance through the <a href="https://www.uwb.edu/financial-aid/child-care-assistance-program">Child Care Assistance Program</a>. Also, UWB offers multiple <a href="https://www.uwb.edu/planning-administration/services/lactation-changing">Campus Lactation Stations</a>.</p>
-
-                        <h4>For Our Veterans</h4>
-                        <p>Welcome! We at UW Bothell understand that the transition into civilian life can be challenging for our veteran students and we have many resources for any who may want to reach out for guidance or assistance. This includes our Vet Corp Navigator through the WDVA and our Student Veterans Association (SVA). Please contact Veteran Services at 425.352.5307 or <a href="mailto:rosal@uw.edu">rosal@uw.edu</a>. For those of you needing more URGENT support, please call The Suicide Prevention Hotline 1.800.273.8255 or connect with the UWB CARE Team <a href="https://www.uwb.edu/studentaffairs/care-team">https://www.uwb.edu/studentaffairs/care-team</a>.</p>
-
-                        <h4>Safety</h4>
-                        <p>Call SafeCampus at 206-685-7233 anytime – no matter where you work or study – to anonymously discuss safety and well-being concerns for yourself or others. SafeCampus’s team of caring professionals will provide individualized support, while discussing short- and long-term solutions and connecting you with additional resources when requested.</p>
-
-                        <h4>Title IX - Sex and Gender-based Violence and Harassment Policy</h4>
-                        <p>UW, through <a href="https://www.washington.edu/titleix/policies/">numerous policies</a>, prohibits sex- and gender-based violence and harassment, and we expect students, faculty, and staff to act professionally and respectfully in all work, learning, and research environments.</p>
-
-                        <p>For support, resources, and reporting options related to sex- and gender-based violence or harassment, visit <a href="https://www.washington.edu/titleix/">UW Title IX’s webpage</a>, specifically the <a href="https://www.washington.edu/titleix/files/2020/08/KYRR-guide-8-10-2020-LINKED.pdf">Know Your Rights & Resources guide</a>.</p>
-                             
-                        <p>Please know that if you choose to disclose information to me about sex- or gender-based violence or harassment, I will connect you (or the person who experienced the conduct) with resources and individuals who can best provide support and options. You can also access those resources directly:</p>
-                        <ul>
-                            <li>Confidential: <a href="https://www.washington.edu/sexualassault/support/advocacy/">Confidential advocates</a> will not share information with others unless given express permission by the person who has experienced the harm or when required by law.</li>
-                            <li>Private and/or anonymous: <a href="https://www.washington.edu/safecampus/">SafeCampus</a> provides consultation and support and can connect you with additional resources if you want them.You can contact SafeCampus anonymously or share limited information when you call.</li>
-                        </ul>
-                            
-                        <p>Please note that some senior leaders and other specified employees have been identified as <a href="https://www.washington.edu/titleix/title-ix-officials-required-to-report/">“Officials Required to Report.”</a> If an Official Required to Report learns of possible sex- or gender-based violence or harassment, they are required to call SafeCampus and report all the details they have in order to ensure that the person who experienced harm is offered support and reporting options.</p>
-                        <ul>
-                            <li>Title IX website: <a href="https://www.washington.edu/titleix/">https://www.washington.edu/titleix/</a></li>
-                            <li>Support and help page: <a href="https://www.washington.edu/titleix/resources/">https://www.washington.edu/titleix/resources/</a></li>
-                            <li>Confidential advocates: <a href="https://www.washington.edu/sexualassault/support/advocacy/">https://www.washington.edu/sexualassault/support/advocacy/</a></li>
-                            <li>SafeCampus: <a href="https://www.washington.edu/safecampus/">https://www.washington.edu/safecampus/</a></li>
-                            <li>Officials Required to Report: <a href="https://www.washington.edu/titleix/title-ix-officials-required-to-report/">https://www.washington.edu/titleix/title-ix-officials-required-to-report/</a></li>
-                            <li>Related policies: <a href="https://www.washington.edu/titleix/policies/">https://www.washington.edu/titleix/policies/</a></li>
-                        </ul>      
-
-                        <h4>Inclement Weather</h4>
-                        <p>Please check if the campus may be closed due to weather. Information on suspension of operations will be made public and available through the media. Students can learn of campus operations status from the <a href="https://www.uwb.edu/">UW Bothell website</a> or by calling the Campus Information Hotline 425.352.3333. You may also sign up with an alert system that will contact you via email or text message if classes are canceled. For more information on the alert process, please see <a href="https://www.uwb.edu/emergency">UWB’s emergency policies</a>. Class activities will be rescheduled as needed.</p>
-                        <p>Please check if the campus may be closed due to weather. Information on suspension of operations will be made public and available through the media. Students can learn of campus operations status from the <a href="https://www.uwb.edu/">UW Bothell website</a> or by calling the Campus Information Hotline 425.352.3333. You may also sign up with an alert system that will contact you via email or text message if classes are canceled. For more information on the alert process, please see <a href="https://www.uwb.edu/emergency">UWB’s emergency policies</a>. Class activities will be rescheduled as needed.</p>
-
-                        <h4>Miscellaneous Student Support Services</h4>
-                        <ul>
-                            <li>Health and Wellness Resource Center (HaWRC): <a href="https://www.uwb.edu/arc/hawrc">https://www.uwb.edu/arc/hawrc</a></li>
-                            <ul>
-                                <li>This resource provides connections, financial coaching, and public benefits enrollment. Their services also include peer health education and sexual and relationship violence prevention and advocacy.</li>
-                            </ul>
-                            <li>Library: <a href="https://library.uwb.edu">https://library.uwb.edu</a>, 425-352-5340</li>
-                            <li>Writing and Communication Center: <a href="https://www.uwb.edu/wacc">https://www.uwb.edu/wacc</a>, 425-352-5253</li>
-                            <li>Quantitative Skills Center: <a href="https://www.uwb.edu/qsc">https://www.uwb.edu/qsc</a>, 425-352-3170</li>
-                            <li>Office of Student Academic Success: <a href="https://www.uwb.edu/academic-affairs/student-academic-success">https://www.uwb.edu/academic-affairs/student-academic-success</a></li>
-                            <li>Counseling Center: <a href="http://www.uwb.edu/studentservices/counseling">http://www.uwb.edu/studentservices/counseling</a>, 425-352-3183</li>
-                            <li>DACA and undocumented student resources: <a href="https://www.uwb.edu/studentaffairs/undocu-resources">https://www.uwb.edu/studentaffairs/undocu-resources</a></li>
-                            <li>Violence Prevention and Advocacy: <a href="https://www.uwb.edu/sexualassault">https://www.uwb.edu/sexualassault</a>, 425-352-3851, uwbvae@uw.edu</li>
-                            <li>The CARE Team: <a href="https://www.uwb.edu/studentaffairs/care-team">https://www.uwb.edu/studentaffairs/care-team</a>, 425-352-SAFE (7233)</li>
-                            <li>Husky Pantry: <a href="https://www.uwb.edu/studentaffairs/resources/husky-pantry">https://www.uwb.edu/studentaffairs/resources/husky-pantry</a>, Husky Village Community Center & UW1-173.</li>     
-                        </ul>
-                        
-                        <h4>IAS Learning Goals</h4>
-                        <p>Undergraduate students in all majors within Interdisciplinary Arts & Sciences (IAS) focus on five core learning objectives: collaboration and shared leadership; critical and creative thinking; diversity and equity; interdisciplinary research and inquiry; writing and communication.</p>
-                        <ul>
-                            <li><strong>Collaboration and Shared Leadership:</strong> IAS students develop their collaboration and shared leadership abilities by learning to work with others to identify dimensions of a project, generate and refine ideas, follow through on the consequences of collective decisions, and pursue specific tasks without losing a sense of the whole. As part of this process, they learn to assess and draw on group members' diverse histories, strengths, and potential contributions. They develop skills in listening, mediating conflict, playing different roles, and reflecting on the outcomes of collaborative work. Students learn different ways of managing groups, communicating effectively and respectfully across differences, and reflecting critically and creatively on collaboration processes.</li>
-                            <li><strong>Critical and Creative Thinking:</strong> IAS students develop their critical and creative thinking abilities by learning how to identify assumptions, and to work out how those assumptions inform results. They assess multiple perspectives, with an eye to understanding why and how they differ, and developing the capacity to engage in controversy productively. Students learn to identify central questions or concerns informing other work, and to develop their own work with an awareness of their own social positions and clear animating questions. Students develop a range of skills in interpretation, analysis, argumentation, application, synthesis, evaluation, and reflection.</li>
-                            <li><strong>Diversity and Equity:</strong> IAS students develop their ability to live and work within and across diverse communities composed of multiple intersecting identities. Learning from the lived experiences, creative expressions and intellectual perspectives of historically-marginalized groups, students recognize and name historical and cultural relationships between power, knowledge, and difference. They develop the confidence and skills needed to transform unequal relations of power ethically and self-reflexively in order to foster greater equity.</li>
-                            <li><strong>Interdisciplinary Research and Inquiry:</strong> IAS students develop their ability to assess and conduct interdisciplinary research by engaging with and across multiple areas of knowledge and kinds of inquiry. They learn to think critically and creatively as they develop research questions, pursue them with appropriate sources and methods, and present results in a form suited to their purpose and intended audience. In this process, they learn to position their own work in relation to other research literatures and methods of inquiry, and in relation to relevant debates and diverse social contexts.</li>
-                            <li><strong>Writing and Communication:</strong> IAS students develop their writing and communication abilities by advancing an awareness of the interconnected relationships between purpose, audience, author and context. They learn to communicate their purposes effectively to diverse audiences through writing, presentations, and other media, and to use a range of evidence, both qualitative and quantitative, to develop ideas and support claims in ways that best serve their needs. As part of this process, they develop the ability to indicate clearly and self-reflexively the ways their specific acts of communication relate to the work of others.</li>
-                        </ul>
-
-                        <h5>IAS Portfolio</h5>
-                        <p>Students majoring in degrees offered by IAS begin the process of creating a Google Drive archive in BIS 300: Interdisciplinary Inquiry and conclude it by creating a Capstone Portfolio in BIS 499. IAS students should maintain an archive of all of the work they have done in (or in relation to) their undergraduate education. If students want to get started with UW Google Apps (including Google Drive), students may consult <a href="https://itconnect.uw.edu/connect/productivity-platforms/google-productivity-platform/">UW IT’s web page</a> (scroll down to UW Google Apps Support Online Help Center).</p>
-
-                        <p>For more information about the IAS portfolio, visit the <a href="https://www.uwb.edu/ias/undergraduate/ias-degree-portfolio">IAS webpage</a>. For help on the technical development of your IAS portfolio, consult Learning Technologies or email at uwbit@uw.edu.   You can also get help from a student tutor in the campus’s <a href="https://www.uwb.edu/it/training-and-support/teaching-learning/open-learning-lab">Open Learning Lab</a> in UW2-140.</p>
-
-                        <h4>Syllabus Revisions</h4>
-                        <p>You are responsible for all materials, updates and announcements covered during class sessions. The course calendar will most likely change over time due to unforeseen circumstances; please be sure you are using the most recent version. I also expect you to use your UW e-mail account and Canvas regularly, so that I can communicate with each of you electronically between classes. If you wish to use another e-mail address as your primary account, set up your UW account to forward to your other address.</p>
-                        
-                        <h5>Syllabus Academic Freedom Statement</h5>
-                        <p>Academic freedom is the principle that scholars have the right - without repression - to teach, conduct research, and/or disseminate ideas, even those that are not widely accepted or convenient, with the primary goal of truth-seeking. This is central to the mission, goals, and values of the academy and is a core principle of academia. As the American Association of University Professors (AAUP) states, "institutions of higher education are conducted for the common good... The common good depends upon the free search for truth and its free exposition." This course is based on the most recent and relevant research and scholarship in this discipline and in related fields.  Although some of the ideas expressed within this course may not be convenient or fit within your worldview, they are grounded in rigorous and informed study.</p>
-                        
-                        <p>Our goal is to have deep, informed, and lively classroom debate and discussion. Students MUST provide logical, rational, and evidence-based argumentation. To be entitled to have your views treated as serious candidates for the truth, you must present evidence for your statements. All “opinions” should be backed up with logical argumentation and evidence with the purpose of seeking truth toward the common good.</p>
-                    </div>
-                 </div>
-            </div> 
+                </li>
+            </ul>
         </div>
-                   
-        <div class="jumbotron mb-0">
-            <div class="text-center w-75 mx-auto"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">UW Bothell BIMD233 Web Technologies Course</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://markdangerchen.github.io/" property="cc:attributionName" rel="cc:attributionURL">Mark Chen</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
+    </nav>
+
+    <div class="container" style="margin-top:70px;">
+        <h1>UWB BIMD 233 Web Design Syllabus+Info</h1>
+
+        <p>Welcome to UW Bothell's BIMD 233 Fundamentals of Web Media Technology (AKA Web Design) course with Dr. Mark
+            Chen! Here you'll find details about the course, the main assignment schedule, and resources to help
+            complete the assignments.</p>
+
+        <div class="row">
+            <div class="col-xl-2 bg-dark">
+                <h3 class="text-right text-white">Instructors</h3>
+            </div>
+            <div class="col-xl-10 border" id="instructors">
+                <p><span class="name" style="font-size: 1.1em;">Dr. Mark Chen</span>, <span
+                        class="rank">Professor</span>, email through Canvas<br>
+                    <!--<span class="name">Robert Castillo</span>, <span class="rank">Peer Facilitator</span>, email through Canvas<br>-->
+                    <strong>How to email:</strong> 1. write a relevant subject line, 2. get our names and titles right,
+                    3. provide context so we know which course and issue you're talking about, and 4. sign it so we know
+                    who you are.</p>
+            </div>
         </div>
-    </body>
+        <div class="row">
+            <div class="col-xl-2 bg-dark">
+                <h3 class="text-right text-white">Description and Tech</h3>
+            </div>
+            <div class="col-xl-10 border">
+                <button type="button" class="btn btn-sm btn-outline-info float-right mt-1 ml-2" data-toggle="collapse"
+                    data-target="#desc">more/less =</button>
+                <p>This course will introduce students to web design and crafting the <em>look and feel</em> of webpages
+                    using <strong>HTML/CSS and Javascript</strong>. </p>
+
+                <div class="collapse" id="desc">
+                    <p>The learning approach is not like a traditional exercise-focused course, and there will be no
+                        lectures or quizzes. Instead, a heavy emphasis will be placed on <strong>self-directed learning
+                            and <a href="https://en.wikipedia.org/wiki/Connected_learning">connected
+                                learning</a></strong> models, where students are expected to invest in their own
+                        learning processes, identifying areas of strengths and weaknesses and learning how to find
+                        resources that complement those aspects of their learning profiles to support them for success.
+                        There's a deep well of expertise to acquire regarding web design, so the course must focus on
+                        <em>preparing students for continued learning</em> beyond this one course. Additionally, these
+                        skills in self-assessment and assembling the right resources for success (AKA <a
+                            href="https://wp0.vanderbilt.edu/cft/guides-sub-pages/metacognition/">metacognition</a> and
+                        <a href="https://digital.lib.washington.edu/researchworks/handle/1773/16275?show=full">sociomaterial
+                            expertise</a>) should transfer to other learning topics.</p>
+
+                    <p>Students will form a <strong>studio-style learning community</strong>, tasked with <em>learning
+                            along with and supporting their peers</em> while working on specific assignments that are
+                        relatively freeform in content and purpose. Many examples of existing code will be given for
+                        students to mimic in order to learn specific techniques and syntax, but the emphasis for this
+                        course will be to cover general design processes while planning out and creating logical web
+                        flows through human-centered design.</p>
+
+                    <p>Final projects will be to <strong>hand-code a portfolio website, a work of art using HTML/CSS, or
+                            another project</strong> of the student's choosing, working with the instructor to scope out
+                        and plan the project.</p>
+
+                    <h4>Learning Objectives</h4>
+                    <p>By the end of the course, students will be able to:</p>
+
+                    <ul>
+                        <li>Understand history of web technologies and how the internet works.</li>
+                        <li>Understand the different underlying languages in making a webpage, including the purpose for
+                            HTML, CSS, and Javascript.</li>
+                        <li>Engage in responsive web design with the popular CSS framework, Bootstrap.</li>
+                        <li>Program at a beginner level in Javascript for conditional web behaviors.</li>
+                        <li>Use iterative processes for working on a team using GitHub.</li>
+                        <li>Register a domain and set up a personal webspace with a hosting company.</li>
+                        <li>Develop a clear statement of intent for design or an artistic vision for creative work.</li>
+                        <li>Prepare images and other media for the web.</li>
+                        <li>Practice strong teamwork and support skills in a studio environment.</li>
+                        <li>Assemble a network of resources for continued learning.</li>
+                    </ul>
+
+                    <h4>Required and Recommended Tech</h4>
+
+                    <p><strong>Canvas</strong> (mostly for email, grading, and keeping track of assignment
+                        deadlines)<br>
+                        <strong>Google Shared Drive</strong> (for collaborative working drafts, etc. and individual
+                        reflections)<br>
+                        <em>Some Web Fundamentals and Tips to Know</em> - a document found in our Google folder, which
+                        acts as sort of the handbook or cheat guide for the course<br>
+                        <strong>Discord</strong> (for online discussion and group communication)<br>
+                        <strong>Perusall</strong> (for collaborative note taking of course readings)<br>
+                        <strong>GitHub</strong> (for collaborative web work and hosting assignments)<br>
+                        <strong>Visual Studio Code</strong> (recommended app to code with)<br>
+                        <strong>CodePen</strong> (awesome online coding environment with a strong community)<br>
+                        <strong>Trello</strong> (project management tool)</p>
+                    <p><strong>Note:</strong> This course depends on students' ability to be agile and communicative
+                        with each other and the instructors. Keep teammates informed at all times. Also, please
+                        regularly check the Discord server and Canvas announcements if you don't have notifications
+                        turned on.</p>
+                    <p>Thanks for reading the syllabus. I know it's a lot, but this is important stuff. If you email me
+                        using the format outlined in a later part of this syllabus, I'll give you 2 extra credit points.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 bg-dark">
+                <h3 class="text-right text-white">Assignments and Grading</h3>
+            </div>
+            <div class="col-xl-10 border">
+                <p>This course is heavily focused on self-directed learning, where you have certain tasks to accomplish
+                    by specific due dates, but you may work faster and actually <strong>should strive to get ahead if
+                        you can</strong>. More material and resources can definitely be provided for any student(s) who
+                    wants to explore web tools more deeply. That said, the trick is that <strong>you will be working in
+                        groups</strong> so your pace will be somewhat constrained by how well your teammates and you
+                    support each other. Additionally, all of the groups will form a larger <strong>learning
+                        community</strong> where everyone helps each other with their individual learning goals.</p>
+
+                <button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#assignments"
+                    data-toggle="collapse">less/more =</button>
+                <h3>Assignment Schedule</h3>
+
+                <p>Specific detail can be found on the <a href="assignments.html">Assignments Page</a>.</p>
+
+                <table class="collapse show table table-striped table-bordered" id="assignments">
+                    <thead class="thead-dark">
+                        <th>ID</th>
+                        <th>Assignment</th>
+                        <th>Due Date</th>
+                        <th class="text-right">Points</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CE</td>
+                            <td>Community Engagement</td>
+                            <td>ongoing</td>
+                            <td class="text-right">15</td>
+                        </tr>
+                        <tr>
+                            <td>AR</td>
+                            <td>Annotating Readings</td>
+                            <td>weekly</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>Setting Up Workflow and Forming Teams</td>
+                            <td>Wk2: Thurs, April 7</td>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML Practice (Teams)</td>
+                            <td>Wk3: Thurs, April 14</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <td>P0</td>
+                            <td>Registering a Domain and Web Hosting</td>
+                            <td>Wk4: Thurs, April 21</td>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cascading Style Sheets (Teams)</td>
+                            <td>Wk5: Thurs, April 28</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <td>P1</td>
+                            <td>Individual Project Idea</td>
+                            <td>Wk6: Tues, May 3</td>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <td>P2</td>
+                            <td>Individual Project Layout and Plan</td>
+                            <td>Wk7: Tues, May 10</td>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bootstrap CSS Framework (Teams)</td>
+                            <td>Wk7: Thurs, May 12</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <td>P3</td>
+                            <td>Individual Project Demo</td>
+                            <td>Wk9: Tues, May 24</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Javascript (Teams)</td>
+                            <td>Wk10: Thurs, June 2</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Web Animation extra credit (Individual or Teams)</td>
+                            <td>Wk10: Thurs, June 2</td>
+                            <td class="text-right">5</td>
+                        </tr>
+                        <tr>
+                            <td>P4</td>
+                            <td>Individual Project Final</td>
+                            <td>Wk11: Tues, June 7</td>
+                            <td class="text-right">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn btn-sm btn-outline-info float-right" data-target="#grading"
+                    data-toggle="collapse">less/more =</button>
+                <h3>Grading</h3>
+
+                <table class="collapse show table table-striped table-bordered table-sm w-75 ml-5" id="grading">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th style="width: 100px;">Points</th>
+                            <th style="width: 100px;">Grade Point</th>
+                            <th style="width: 100px;">Points</th>
+                            <th>Grade Point</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>99+</td>
+                            <td>4.0</td>
+                            <td>80</td>
+                            <td>3.0</td>
+                        </tr>
+                        <tr>
+                            <td>97-98</td>
+                            <td>3.9</td>
+                            <td>79</td>
+                            <td>2.9</td>
+                        </tr>
+                        <tr>
+                            <td>95-96</td>
+                            <td>3.8</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>93-94</td>
+                            <td>3.7</td>
+                            <td>70</td>
+                            <td>2.0</td>
+                        </tr>
+                        <tr>
+                            <td>91-92</td>
+                            <td>3.6</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>89-90</td>
+                            <td>3.5</td>
+                            <td>60</td>
+                            <td>1.0</td>
+                        </tr>
+                        <tr>
+                            <td>87-88</td>
+                            <td>3.4</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>85-86</td>
+                            <td>3.3</td>
+                            <td>57</td>
+                            <td>0.7</td>
+                        </tr>
+                        <tr>
+                            <td>83-84</td>
+                            <td>3.2</td>
+                            <td>0-56</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>81-82</td>
+                            <td>3.1</td>
+                            <td colspan="2">^ Before this happens, please come talk to me.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 bg-dark">
+                <h3 class="text-right text-white">Resources</h3>
+            </div>
+            <div class="col-xl-10 border">
+                <button type="button" class="btn btn-sm btn-outline-info float-right mt-1 ml-2" data-target="#resources"
+                    data-toggle="collapse">more/less =</button>
+                <p>In addition to the general web tutorials and where to acquire the tools for the course on the <a
+                        href="resources.html">Resources Page</a>, be sure to look at the <strong>Sample Pages</strong>
+                    throughout the quarter!</p>
+
+                <div class="collapse" id="resources">
+                    <p>The intent is that you'd go to each page and right-click on an empty portion of the page to
+                        <strong>View Source OR hit F12</strong> in your browser to view the code. Then you can see
+                        examples of how certain tags work in action and start to understand proper syntax and such.</p>
+
+                    <p>Each page gets progressively more complex, the first one being relatively simple HTML. There's a
+                        lot more to each of the languages, though, so these pages are just meant as the first step and
+                        bare minimum you're expected to understand by the end of the quarter. If you want to learn how
+                        to do other things not covered (like, for example, draw shapes and animate them), there're other
+                        ways to find that info out once you have the basics down.</p>
+
+                    <p>The course is meant to introduce the basics and then teach you how to find more information on
+                        your own. This is actually how I run almost all of my courses. I'm more interested in helping
+                        people figure out how to continue improving or learning after taking one of my courses than I am
+                        in getting them to do specific things just for the course.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 bg-dark">
+                <h3 class="text-right text-white">Course and UWB Info</h3>
+            </div>
+            <div class="col-xl-10 border">
+                <button type="button" class="btn btn-sm btn-outline-info float-right mt-1" data-target="#info"
+                    data-toggle="collapse">more/less =</button>
+                <p>General but Important Info...</p>
+                <div class="collapse" id="info">
+                    <h4>UWB's COVID info: <a
+                            href="https://www.uwb.edu/coronavirus/covid-19-communications">https://www.uwb.edu/coronavirus/covid-19-communications</a>
+                    </h4>
+                    <ul>
+                        <li>Wearing masks will become optional on the UW Bothell campus starting March 28. However,
+                            masks are strongly recommended indoors for at least the first two weeks of spring quarter.
+                            For those who choose to continue wearing a mask for a variety of reasons, we welcome and
+                            respect your choice.</li>
+                        <li>With masks becoming optional, we will discontinue the practice of designating eating-only
+                            areas in our public spaces. However, for those who would like such an area as we return for
+                            spring quarter, the North Creek Event Center will continue as a designated eating space,
+                            with appropriate distancing, until April 30. We ask you to be mindful of considerate
+                            practices such as cleaning your space after use, wherever you choose to eat.</li>
+                        <li>Free surgical masks will continue to be available through dispensers in buildings across
+                            campus.</li>
+                        <li>The <a href="https://www.washington.edu/coronavirus/testing/">Husky Coronavirus Testing
+                                program</a> (a voluntary research study) will continue to offer free coronavirus testing
+                            kits to the campus community in the Commons Lobby of Commons Hall (UW2) Mondays through
+                            Fridays from 10 a.m. to 2 p.m. Please note that HCT staff will not be available onsite
+                            during spring break, March 19-27.</li>
+                    </ul>
+
+                    <h4>General Teaching Statement</h4>
+                    <p>First, I believe I have a responsibility to support you for lifelong success and happiness. The
+                        way I've designed this course is in line with this guiding principle, from the technologies we
+                        use to how I accept revisions for almost all assignments. Furthermore, the course is initially
+                        destabilizing by design because I want you to practice finding answers, asking when you need
+                        help, and learning through trying something, receiving feedback, and trying again until you
+                        excel. I have a tiny blip of a chance to affect you positively in the long scheme of things so
+                        I've designed this course to encourage agility, independence, curiosity, and perseverance so
+                        that hopefully I've helped you be successful long after this course is over.</p>
+
+                    <p>Second, I am a scholar and designer who believes in equity, justice, and maximizing agency for
+                        everyone. But I don't have all the answers, and I am on a lifelong journey to learn as well.
+                        Additionally, I try my hardest to decentralize power and to treat you as equals, but there are
+                        inherent dynamics that will always exist. I will endeavor to never exercise that power unless it
+                        is ethical to do so.</p>
+
+                    <p>Third, learning is social. This is the foundational principle of my PhD research in education and
+                        informal learning. I encourage you to communicate with each other, with the peer facilitators,
+                        and with me as much as possible, even if all you have to say is just a small status update. You
+                        want to develop "swift trust" and to learn by asking and reasoning aloud and by watching others.
+                    </p>
+
+                    <h4>Late Policy</h4>
+                    <p>Most of the activities for my courses are done in teams or have certain milestones requiring you
+                        give and receive feedback from peers. As such, it's quite difficult to get the same experience
+                        if you turn in late assignments. They become meaningless if they arrive after someone was
+                        available to provide you with feedback. Meaningless work gets a zero grade. Late, but still
+                        meaningful, work gets at least partial credit, and you must let us know that you are still
+                        planning on doing it. If it's extremely insightful or proves that you've been thinking about the
+                        course topics deeply, full points are still possible.</p>
+
+                    <p>Also, extreme circumstances sometimes do occur, so if that happens, please let me know and we can
+                        figure something out. If you know something will come up during the quarter, let us know earlier
+                        rather than later so we can figure out how you can still participate.</p>
+
+                    <p>That said, revisions are usually encouraged and actually expected if you receive comments or
+                        suggestions for edits. In other words, your best stab at something by the due date is way better
+                        than not turning something in on time. Most of the time, you'll just get comments and can submit
+                        revisions to be regraded. You must, however, let us know what's going on and what your
+                        expectations are! So let us know what you're thinking!</p>
+
+                    <h4>Attendance and Zoom</h4>
+                    <p>You are expected to be there during class times, but we will not be taking attendance to allow
+                        for anyone who needs to be absent for any given week (due to COVID or other reasons). If you
+                        cannot make it, you are still expected to let us and your team know!</p>
+
+                    <p>Any Zoom class sessions might be recorded. The recording will capture the presenter's audio,
+                        video, and computer screen. Student audio and video will be recorded if they share their
+                        computer audio and video during the recorded session. The recordings will be accessible to
+                        students enrolled in the course to review materials. Normally, these recordings will not be
+                        shared with or accessible to the public.</p>
+
+                    <p>The University and Zoom have FERPA-compliant agreements in place to protect the security and
+                        privacy of UW Zoom accounts. Students who do not wish to be recorded should:</p>
+                    <ul>
+                        <li>Change their Zoom screen name to hide any personal identifying information such as their
+                            name or UW Net ID, and</li>
+                        <li>Not share their computer audio or video during their Zoom sessions.</li>
+                    </ul>
+
+                    <p>All that said, you are still highly encouraged to share your video when appropriate. A lot of
+                        online community and <em>presence</em> research shows that it is harder to "be social" through
+                        online forms of communication since people miss out on gesture, body language, facial
+                        expressions, tonal changes, etc., but one way to mitigate this at least a little is to share
+                        video and audio. But it is entirely up to you whether you do. If not, there are alternatives
+                        such as using a filter (e.g., <a href="https://snapcamera.snapchat.com/download/">Snap
+                            Camera</a>) or <a
+                            href="https://support.zoom.us/hc/en-us/articles/201363203-Customizing-your-profile">putting
+                            up a photo as your profile image</a>. If you are simply self-conscious about how you look,
+                        one solution would be to <a
+                            href="https://support.zoom.us/hc/en-us/articles/115001077226-Hiding-or-showing-my-video-on-my-display">turn
+                            off your self-view in Zoom</a>, which has been shown to alleviate feeling like everyone is
+                        watching.</p>
+
+                    <h4>Online Communication</h4>
+                    <p>Allow for mistakes. Despite the best intentions, sometimes you might be hurt by something that
+                        someone in the course says. Please talk to me about this, as I can help resolve the conflicts.
+                        Remember that most students, and humans in general, are clueless and that we don't usually
+                        intend to be hurtful. Never ascribe spite when it's more likely incompetence or cluelessness!
+                    </p>
+
+                    <p>Respect privacy. Please don't share people's work or email messages. What happens in this class,
+                        stays in this class.</p>
+
+                    <p>Write well. Be clear and concise, use good spelling and grammar. Stay on topic. To check clarity,
+                        read your message aloud to yourself before sending it.</p>
+
+                    <p>As a general rule, I will not message or respond to students on Slack / Discord or through other
+                        means after 9 pm, so if you want to reach me and want a reply that day, please be sure to
+                        message me well in advance of that evening. Please write to me on my university email account
+                        for any messages that are super important and/or that you do not wish to place on Discord so
+                        that we can keep a good record of the messages (and to ensure I receive them because DMs on
+                        Discord can sometimes get lost!).</p>
+
+                    <p>In addition, advising staff in the UW Bothell's Schools of IAS and STEM will have access to
+                        Canvas, Discord, and other communication tools used in courses as a means to support and
+                        mitigate issues if any arise.</p>
+
+                    <p>I take on different roles in my relations with students. I am generally your friend and care
+                        about you, but I am also your professor, so keep that in mind in your communications with me.
+                    </p>
+
+                    <h4>A Note on Stress</h4>
+                    <p>Success in this course depends heavily on your personal health and wellbeing. Recognize that
+                        stress is an expected part of the college experience, and it often can be compounded by
+                        unexpected setbacks or life changes outside the classroom. And let's be realistic. Life
+                        absolutely sucks for most people right now. Stress is a perfectly natural response to
+                        world-altering events. If you somehow have made it through the past year completely unaffected,
+                        realize that most of your classmates were not so lucky. Some of them may have lost friends or
+                        family, have lost their jobs, have been hospitalized, have extra responsibilities such as caring
+                        for parents or grandparents, or are otherwise dealing with things that make them perform less
+                        than optimally.</p>
+
+                    <p>That said, your other instructors and I strongly encourage you to reframe challenges as an
+                        unavoidable pathway to success. Reflect on your role in taking care of yourself throughout the
+                        term, before the demands of exams and projects reach their peak.</p>
+
+                    <p>You do not owe me or your teammates personal information about your situation. It is up to you
+                        what you choose to share with your team that is personal in nature; however, do let your team
+                        know anything that will affect projects (for example, if you'll be late on a deliverable, you
+                        should let your team know that you're running late, but you're not obligated to tell them why).
+                        From the other end of things, if others on your team give you bad news about their own status,
+                        don't ask for personal information; let your teammates choose whether to volunteer anything
+                        additional, don't pressure them to divulge, and respect their decision.</p>
+
+                    <p>Please DO feel free to reach out to me about any difficulty you may be having that may impact
+                        your performance in this course as soon as it occurs and before it becomes unmanageable. And you
+                        are always welcome to talk to me about whatever you like, whether it's personal, professional,
+                        or a combination. Additionally your academic advisor and many <a
+                            href="http://www.uwb.edu/studentservices/counseling">other support services on campus</a>
+                        stand ready to assist you if you need/want.</p>
+
+                    <p>Again, thanks for reading this syllabus. I know it's a lot, but it's important. If you email me
+                        with your name, this course number, and an image of a cat, you'll get 2 extra credit points. If
+                        you email me later in the quarter asking for help and the answer is in the syllabus, I'll
+                        respond with an image of a cat.</p>
+
+                    <h4>General Student Conduct</h4>
+                    <p>The University of Washington Student Conduct Code (WAC 478-121) defines prohibited academic and
+                        behavioral conduct and describes how the University holds students accountable as they pursue
+                        their academic goals. Allegations of misconduct by students may be referred to the appropriate
+                        campus office for investigation and resolution. More information can be found online at <a
+                            href="https://www.washington.edu/studentconduct/">https://www.washington.edu/studentconduct/</a>
+                    </p>
+
+                    <p>You are responsible for knowing what constitutes a violation of the University of Washington
+                        Student Code, and you will be held responsible for any such violations whether they were
+                        intentional or not.</p>
+
+                    <h4>Academic Integrity</h4>
+                    <p>Please see the UW Bothell General Catalog, the documents you signed upon admission to IAS, and
+                        these <a href="https://www.uwb.edu/studentaffairs/studentconduct">policy statements</a> for
+                        crucial information regarding academic integrity. The library also has <a
+                            href="https://guides.lib.uw.edu/friendly.php?s=bothell/ai">useful resources</a> for you to
+                        explore. You are responsible for knowing what constitutes a violation of the University of
+                        Washington Student Code regardless of your intent. Make sure you know how to properly cite any
+                        ideas or words you have taken from outside sources.</p>
+
+                    <p>Work of any kind (including written, video, audio, performance, artistic, etc.) produced outside
+                        of this course may not be submitted for credit without first discussing it with your instructor.
+                        In most circumstances, work produced for one course may not be submitted for another course.</p>
+
+                    <h4>Navigate</h4>
+                    <p>There are many registration deadlines that come quickly during the quarter--for instance, a
+                        decision to drop a class. As your professor, part of my job is to communicate any concerns I may
+                        have about your academic performance to your advisors. This is meant to better connect you with
+                        support resources before it is too late. UW Bothell utilizes the Navigate Student Success
+                        Management system to allow me to share such feedback with your advisors should I feel such
+                        communication is needed. In addition, your advisors may request that I submit a <a
+                            href="https://docs.google.com/spreadsheets/d/1VEPJbAUKeeQ0I-aAHTQS8Rh_GYPPiq3wDt5JKsu9tCQ/edit#gid=0">progress
+                            report</a> on your behalf. These communications remain confidential between me and your
+                        advisors, but will provide them up-to-date information related to your assignments, academic
+                        progress, and participation. Using Navigate to alert advisors about your academic progress will
+                        both help advising staff to know when you might need support and will prompt me to reflect on
+                        your work and make me think about what I can do to help you succeed in this class and at UW
+                        Bothell.</p>
+
+                    <h4>Access and Accommodations</h4>
+                    <p>Your experience in this class is important to us, and it is the policy and practice of the
+                        University of Washington to create inclusive and accessible learning environments consistent
+                        with federal and state law. If you experience barriers based on disability, please seek a
+                        meeting with Disability Resources for Students (DRS) to discuss and address them. You may
+                        complete the New Student Application in this link <a
+                            href="https://www.uwb.edu/studentaffairs/drs">https://www.uwb.edu/studentaffairs/drs</a>,
+                        and DRS will contact you. If you have already established accommodations with DRS, please
+                        communicate your approved accommodations to your instructor at your earliest convenience so we
+                        can discuss your needs in this course.</p>
+
+                    <p>DRS offers resources and coordinates reasonable accommodations for students with disabilities.
+                        Reasonable accommodations are established through an interactive process between you, your
+                        instructor(s) and DRS. If you have not yet established services through DRS, but have a
+                        temporary or permanent disability that requires accommodations (this can include but not limited
+                        to; mental health, attention-related, learning, vision, hearing, physical or health impacts),
+                        you are welcome to contact DRS at 425.352.5307 (Voice and Relay) or rosal@uw.edu.</p>
+
+                    <p>You may find more information on the Disability Resources for Students website.</p>
+
+                    <p>Acts of academic misconduct may include but are not limited to:</p>
+                    <ul>
+                        <li>Cheating (working collaboratively on quizzes/exams and discussion submissions, sharing
+                            answers and previewing quizzes/exams)</li>
+                        <li>Plagiarism (representing the work of others as your own without giving appropriate credit to
+                            the original author(s))</li>
+                        <li>Unauthorized collaboration (working with each other on assignments)</li>
+                    </ul>
+
+                    <h4>Religious Observance</h4>
+                    <p>It is the policy of University of Washington to reasonably accommodate students' religious
+                        observances in accordance with <a
+                            href="https://apps.leg.wa.gov/rcw/default.aspx?cite=28B.137.010">RCW 28B.137.010</a>.</p>
+
+                    <p>Washington state law requires that UW develop a policy for accommodation of student absences or
+                        significant hardship due to reasons of faith or conscience, or for organized religious
+                        activities. The UW's policy, including more information about how to request an accommodation,
+                        is available at <a
+                            href="https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/">Religious
+                            Accommodations Policy</a>. Accommodations must be requested within the first two weeks of
+                        this course using the <a
+                            href="https://registrar.washington.edu/students/religious-accommodations-request/">Religious
+                            Accommodations Request form</a>.</p>
+
+                    <h4>Parenting Student Resources</h4>
+                    <p>Parenting Students are encouraged to look at the resources on the <a
+                            href="https://www.uwb.edu/titleix/students-who-are-parents">Parent Resources website</a>. In
+                        addition, parenting students may apply for financial assistance through the <a
+                            href="https://www.uwb.edu/financial-aid/child-care-assistance-program">Child Care Assistance
+                            Program</a>. Also, UWB offers multiple <a
+                            href="https://www.uwb.edu/planning-administration/services/lactation-changing">Campus
+                            Lactation Stations</a>.</p>
+
+                    <h4>For Our Veterans</h4>
+                    <p>Welcome! We at UW Bothell understand that the transition into civilian life can be challenging
+                        for our veteran students and we have many resources for any who may want to reach out for
+                        guidance or assistance. This includes our Vet Corp Navigator through the WDVA and our Student
+                        Veterans Association (SVA). Please contact Veteran Services at 425.352.5307 or <a
+                            href="mailto:rosal@uw.edu">rosal@uw.edu</a>. For those of you needing more URGENT support,
+                        please call The Suicide Prevention Hotline 1.800.273.8255 or connect with the UWB CARE Team <a
+                            href="https://www.uwb.edu/studentaffairs/care-team">https://www.uwb.edu/studentaffairs/care-team</a>.
+                    </p>
+
+                    <h4>Safety</h4>
+                    <p>Call SafeCampus at 206-685-7233 anytime – no matter where you work or study – to anonymously
+                        discuss safety and well-being concerns for yourself or others. SafeCampus's team of caring
+                        professionals will provide individualized support, while discussing short- and long-term
+                        solutions and connecting you with additional resources when requested.</p>
+
+                    <h4>Title IX - Sex and Gender-based Violence and Harassment Policy</h4>
+                    <p>UW, through <a href="https://www.washington.edu/titleix/policies/">numerous policies</a>,
+                        prohibits sex- and gender-based violence and harassment, and we expect students, faculty, and
+                        staff to act professionally and respectfully in all work, learning, and research environments.
+                    </p>
+
+                    <p>For support, resources, and reporting options related to sex- and gender-based violence or
+                        harassment, visit <a href="https://www.washington.edu/titleix/">UW Title IX's webpage</a>,
+                        specifically the <a
+                            href="https://www.washington.edu/titleix/files/2020/08/KYRR-guide-8-10-2020-LINKED.pdf">Know
+                            Your Rights & Resources guide</a>.</p>
+
+                    <p>Please know that if you choose to disclose information to me about sex- or gender-based violence
+                        or harassment, I will connect you (or the person who experienced the conduct) with resources and
+                        individuals who can best provide support and options. You can also access those resources
+                        directly:</p>
+                    <ul>
+                        <li>Confidential: <a
+                                href="https://www.washington.edu/sexualassault/support/advocacy/">Confidential
+                                advocates</a> will not share information with others unless given express permission by
+                            the person who has experienced the harm or when required by law.</li>
+                        <li>Private and/or anonymous: <a href="https://www.washington.edu/safecampus/">SafeCampus</a>
+                            provides consultation and support and can connect you with additional resources if you want
+                            them.You can contact SafeCampus anonymously or share limited information when you call.</li>
+                    </ul>
+
+                    <p>Please note that some senior leaders and other specified employees have been identified as <a
+                            href="https://www.washington.edu/titleix/title-ix-officials-required-to-report/">“Officials
+                            Required to Report.”</a> If an Official Required to Report learns of possible sex- or
+                        gender-based violence or harassment, they are required to call SafeCampus and report all the
+                        details they have in order to ensure that the person who experienced harm is offered support and
+                        reporting options.</p>
+                    <ul>
+                        <li>Title IX website: <a
+                                href="https://www.washington.edu/titleix/">https://www.washington.edu/titleix/</a></li>
+                        <li>Support and help page: <a
+                                href="https://www.washington.edu/titleix/resources/">https://www.washington.edu/titleix/resources/</a>
+                        </li>
+                        <li>Confidential advocates: <a
+                                href="https://www.washington.edu/sexualassault/support/advocacy/">https://www.washington.edu/sexualassault/support/advocacy/</a>
+                        </li>
+                        <li>SafeCampus: <a
+                                href="https://www.washington.edu/safecampus/">https://www.washington.edu/safecampus/</a>
+                        </li>
+                        <li>Officials Required to Report: <a
+                                href="https://www.washington.edu/titleix/title-ix-officials-required-to-report/">https://www.washington.edu/titleix/title-ix-officials-required-to-report/</a>
+                        </li>
+                        <li>Related policies: <a
+                                href="https://www.washington.edu/titleix/policies/">https://www.washington.edu/titleix/policies/</a>
+                        </li>
+                    </ul>
+
+                    <h4>Inclement Weather</h4>
+                    <p>Please check if the campus may be closed due to weather. Information on suspension of operations
+                        will be made public and available through the media. Students can learn of campus operations
+                        status from the <a href="https://www.uwb.edu/">UW Bothell website</a> or by calling the Campus
+                        Information Hotline 425.352.3333. You may also sign up with an alert system that will contact
+                        you via email or text message if classes are canceled. For more information on the alert
+                        process, please see <a href="https://www.uwb.edu/emergency">UWB's emergency policies</a>. Class
+                        activities will be rescheduled as needed.</p>
+                    <p>Please check if the campus may be closed due to weather. Information on suspension of operations
+                        will be made public and available through the media. Students can learn of campus operations
+                        status from the <a href="https://www.uwb.edu/">UW Bothell website</a> or by calling the Campus
+                        Information Hotline 425.352.3333. You may also sign up with an alert system that will contact
+                        you via email or text message if classes are canceled. For more information on the alert
+                        process, please see <a href="https://www.uwb.edu/emergency">UWB's emergency policies</a>. Class
+                        activities will be rescheduled as needed.</p>
+
+                    <h4>Miscellaneous Student Support Services</h4>
+                    <ul>
+                        <li>Health and Wellness Resource Center (HaWRC): <a
+                                href="https://www.uwb.edu/arc/hawrc">https://www.uwb.edu/arc/hawrc</a></li>
+                        <ul>
+                            <li>This resource provides connections, financial coaching, and public benefits enrollment.
+                                Their services also include peer health education and sexual and relationship violence
+                                prevention and advocacy.</li>
+                        </ul>
+                        <li>Library: <a href="https://library.uwb.edu">https://library.uwb.edu</a>, 425-352-5340</li>
+                        <li>Writing and Communication Center: <a
+                                href="https://www.uwb.edu/wacc">https://www.uwb.edu/wacc</a>, 425-352-5253</li>
+                        <li>Quantitative Skills Center: <a href="https://www.uwb.edu/qsc">https://www.uwb.edu/qsc</a>,
+                            425-352-3170</li>
+                        <li>Office of Student Academic Success: <a
+                                href="https://www.uwb.edu/academic-affairs/student-academic-success">https://www.uwb.edu/academic-affairs/student-academic-success</a>
+                        </li>
+                        <li>Counseling Center: <a
+                                href="http://www.uwb.edu/studentservices/counseling">http://www.uwb.edu/studentservices/counseling</a>,
+                            425-352-3183</li>
+                        <li>DACA and undocumented student resources: <a
+                                href="https://www.uwb.edu/studentaffairs/undocu-resources">https://www.uwb.edu/studentaffairs/undocu-resources</a>
+                        </li>
+                        <li>Violence Prevention and Advocacy: <a
+                                href="https://www.uwb.edu/sexualassault">https://www.uwb.edu/sexualassault</a>,
+                            425-352-3851, uwbvae@uw.edu</li>
+                        <li>The CARE Team: <a
+                                href="https://www.uwb.edu/studentaffairs/care-team">https://www.uwb.edu/studentaffairs/care-team</a>,
+                            425-352-SAFE (7233)</li>
+                        <li>Husky Pantry: <a
+                                href="https://www.uwb.edu/studentaffairs/resources/husky-pantry">https://www.uwb.edu/studentaffairs/resources/husky-pantry</a>,
+                            Husky Village Community Center & UW1-173.</li>
+                    </ul>
+
+                    <h4>IAS Learning Goals</h4>
+                    <p>Undergraduate students in all majors within Interdisciplinary Arts & Sciences (IAS) focus on five
+                        core learning objectives: collaboration and shared leadership; critical and creative thinking;
+                        diversity and equity; interdisciplinary research and inquiry; writing and communication.</p>
+                    <ul>
+                        <li><strong>Collaboration and Shared Leadership:</strong> IAS students develop their
+                            collaboration and shared leadership abilities by learning to work with others to identify
+                            dimensions of a project, generate and refine ideas, follow through on the consequences of
+                            collective decisions, and pursue specific tasks without losing a sense of the whole. As part
+                            of this process, they learn to assess and draw on group members' diverse histories,
+                            strengths, and potential contributions. They develop skills in listening, mediating
+                            conflict, playing different roles, and reflecting on the outcomes of collaborative work.
+                            Students learn different ways of managing groups, communicating effectively and respectfully
+                            across differences, and reflecting critically and creatively on collaboration processes.
+                        </li>
+                        <li><strong>Critical and Creative Thinking:</strong> IAS students develop their critical and
+                            creative thinking abilities by learning how to identify assumptions, and to work out how
+                            those assumptions inform results. They assess multiple perspectives, with an eye to
+                            understanding why and how they differ, and developing the capacity to engage in controversy
+                            productively. Students learn to identify central questions or concerns informing other work,
+                            and to develop their own work with an awareness of their own social positions and clear
+                            animating questions. Students develop a range of skills in interpretation, analysis,
+                            argumentation, application, synthesis, evaluation, and reflection.</li>
+                        <li><strong>Diversity and Equity:</strong> IAS students develop their ability to live and work
+                            within and across diverse communities composed of multiple intersecting identities. Learning
+                            from the lived experiences, creative expressions and intellectual perspectives of
+                            historically-marginalized groups, students recognize and name historical and cultural
+                            relationships between power, knowledge, and difference. They develop the confidence and
+                            skills needed to transform unequal relations of power ethically and self-reflexively in
+                            order to foster greater equity.</li>
+                        <li><strong>Interdisciplinary Research and Inquiry:</strong> IAS students develop their ability
+                            to assess and conduct interdisciplinary research by engaging with and across multiple areas
+                            of knowledge and kinds of inquiry. They learn to think critically and creatively as they
+                            develop research questions, pursue them with appropriate sources and methods, and present
+                            results in a form suited to their purpose and intended audience. In this process, they learn
+                            to position their own work in relation to other research literatures and methods of inquiry,
+                            and in relation to relevant debates and diverse social contexts.</li>
+                        <li><strong>Writing and Communication:</strong> IAS students develop their writing and
+                            communication abilities by advancing an awareness of the interconnected relationships
+                            between purpose, audience, author and context. They learn to communicate their purposes
+                            effectively to diverse audiences through writing, presentations, and other media, and to use
+                            a range of evidence, both qualitative and quantitative, to develop ideas and support claims
+                            in ways that best serve their needs. As part of this process, they develop the ability to
+                            indicate clearly and self-reflexively the ways their specific acts of communication relate
+                            to the work of others.</li>
+                    </ul>
+
+                    <h5>IAS Portfolio</h5>
+                    <p>Students majoring in degrees offered by IAS begin the process of creating a Google Drive archive
+                        in BIS 300: Interdisciplinary Inquiry and conclude it by creating a Capstone Portfolio in BIS
+                        499. IAS students should maintain an archive of all of the work they have done in (or in
+                        relation to) their undergraduate education. If students want to get started with UW Google Apps
+                        (including Google Drive), students may consult <a
+                            href="https://itconnect.uw.edu/connect/productivity-platforms/google-productivity-platform/">UW
+                            IT's web page</a> (scroll down to UW Google Apps Support Online Help Center).</p>
+
+                    <p>For more information about the IAS portfolio, visit the <a
+                            href="https://www.uwb.edu/ias/undergraduate/ias-degree-portfolio">IAS webpage</a>. For help
+                        on the technical development of your IAS portfolio, consult Learning Technologies or email at
+                        uwbit@uw.edu. You can also get help from a student tutor in the campus's <a
+                            href="https://www.uwb.edu/it/training-and-support/teaching-learning/open-learning-lab">Open
+                            Learning Lab</a> in UW2-140.</p>
+
+                    <h4>Syllabus Revisions</h4>
+                    <p>You are responsible for all materials, updates and announcements covered during class sessions.
+                        The course calendar will most likely change over time due to unforeseen circumstances; please be
+                        sure you are using the most recent version. I also expect you to use your UW e-mail account and
+                        Canvas regularly, so that I can communicate with each of you electronically between classes. If
+                        you wish to use another e-mail address as your primary account, set up your UW account to
+                        forward to your other address.</p>
+
+                    <h5>Syllabus Academic Freedom Statement</h5>
+                    <p>Academic freedom is the principle that scholars have the right - without repression - to teach,
+                        conduct research, and/or disseminate ideas, even those that are not widely accepted or
+                        convenient, with the primary goal of truth-seeking. This is central to the mission, goals, and
+                        values of the academy and is a core principle of academia. As the American Association of
+                        University Professors (AAUP) states, "institutions of higher education are conducted for the
+                        common good... The common good depends upon the free search for truth and its free exposition."
+                        This course is based on the most recent and relevant research and scholarship in this discipline
+                        and in related fields. Although some of the ideas expressed within this course may not be
+                        convenient or fit within your worldview, they are grounded in rigorous and informed study.</p>
+
+                    <p>Our goal is to have deep, informed, and lively classroom debate and discussion. Students MUST
+                        provide logical, rational, and evidence-based argumentation. To be entitled to have your views
+                        treated as serious candidates for the truth, you must present evidence for your statements. All
+                        “opinions” should be backed up with logical argumentation and evidence with the purpose of
+                        seeking truth toward the common good.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron mb-0">
+        <div class="text-center w-75 mx-auto"><a rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License"
+                    style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span
+                xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
+                property="dct:title" rel="dct:type">UW Bothell BIMD233 Web Technologies Course</span> by <a
+                xmlns:cc="http://creativecommons.org/ns#" href="https://markdangerchen.github.io/"
+                property="cc:attributionName" rel="cc:attributionURL">Mark Chen</a> is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
+    </div>
+</body>
+
 </html>
