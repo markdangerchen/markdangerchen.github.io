@@ -1,0 +1,39 @@
+Complete Asset Recap for "Valkrie-Flight-Advanced"
+
+Image Assets (5 Files):
+
+valkyrie-extended.png
+    Purpose: The main jet sprite with wings extended.
+    Requirements: Transparent background. Consistent dimensions and jet centering with valkyrie-retracted.png. (e.g., 300x300px)
+valkyrie-retracted.png
+    Purpose: The main jet sprite with wings retracted.
+    Requirements: Transparent background. Consistent dimensions and jet centering with valkyrie-extended.png. (e.g., 300x300px)
+ocean-texture.png
+    Purpose: The scrolling background.
+    Requirements: Must be vertically seamless/tileable. (e.g., 2048x2048px)
+shadow-extended.png
+    Purpose: The custom shadow image for the jet with wings extended.
+    Requirements: Should be a pre-blurred, semi-transparent silhouette matching valkyrie-extended.png. Export as PNG with transparency.
+shadow-retracted.png
+    Purpose: The custom shadow image for the jet with wings retracted.
+    Requirements: Should be a pre-blurred, semi-transparent silhouette matching valkyrie-retracted.png. If you're including the "splash" effect for the low-flying state, it would be part of this image. Export as PNG with transparency.
+
+Audio Files (5 Files):
+
+transform-down.mp3
+    Purpose: Sound effect when the jet is pressed/starts dragging.
+    Requirements: Short, impactful (1-2 seconds).
+transform-up.mp3
+    Purpose: Sound effect when the jet is released.
+    Requirements: Short, impactful (1-2 seconds).
+soundtrack.mp3
+    Purpose: Main background music.
+    Requirements: Must loop seamlessly.
+ambient-cruise.mp3
+    Purpose: Combined engine and wind noise for the high-flying/cruise state.
+    Contents: A pre-mixed combination of calm engine hum and high-altitude wind.
+    Requirements: Must loop seamlessly.
+ambient-boost.mp3
+    Purpose: Combined engine and wind noise for the low-flying/boost state (when dragging).
+    Contents: A pre-mixed combination of powerful engine roar and turbulent wind.
+    Requirements: Must loop seamlessly.
