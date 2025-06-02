@@ -42,7 +42,7 @@
         let state = 'high';
         let cameraZoom = 1.0, targetZoom = 1.0;
         let oceanOffsetY = 0;
-        const oceanSpeed = 0.5;
+        const oceanSpeed = 1.5;
         let jetX = 0, jetY = 0;
         let isDragging = false;
         const JET_HITBOX_RADIUS = 50;
@@ -52,8 +52,9 @@
         let lastPointerX_world = 0; // To store the target X for the jet to follow
         let lastPointerY_world = 0; // To store the target Y for the jet to follow
         const JET_FOLLOW_LERP_SPEED = 0.1; // Controls how quickly the jet follows (0.0 to 1.0)
+        const MAX_JET_SPEED_PER_FRAME = 2; // Max pixels the jet can move per frame while dragging
 
-        
+
         async function loadAllAssets() { const loadImage=(url)=>new Promise(resolve=>{const i=new Image();i.src=url;i.onload=()=>resolve(i);i.onerror=()=>{console.warn(`Image failed: ${url}`);resolve(null);};});const loadAudioData=(url)=>fetch(url).then(r=>r.ok?r.arrayBuffer():null).catch(e=>{console.warn(`Audio failed: ${url}`,e);return null;});const results=await Promise.all([loadImage(valkyrieExtendedSrc),loadImage(valkyrieRetractedSrc),loadImage(oceanSrc),loadImage(shadowExtendedSrc),loadImage(shadowRetractedSrc),loadAudioData(transformDownSfxSrc),loadAudioData(transformUpSfxSrc),loadAudioData(soundtrackSrc),loadAudioData(ambientCruiseSrc),loadAudioData(ambientBoostSrc)]);[valkyrieExtendedImg,valkyrieRetractedImg,oceanImg,shadowExtendedImg,shadowRetractedImg,transformDownBuffer,transformUpBuffer,soundtrackBuffer,ambientCruiseBuffer,ambientBoostBuffer]=results;}
         async function initializeAudio() { if(isAudioInitialized)return;isAudioInitialized=true;try{audioCtx=new(window.AudioContext||window.webkitAudioContext)();const decodeAudio=async(d)=>d?await audioCtx.decodeAudioData(d.slice(0)):null;[transformDownBuffer,transformUpBuffer,soundtrackBuffer,ambientCruiseBuffer,ambientBoostBuffer]=await Promise.all([decodeAudio(transformDownBuffer),decodeAudio(transformUpBuffer),decodeAudio(soundtrackBuffer),decodeAudio(ambientCruiseBuffer),decodeAudio(ambientBoostBuffer)]);if(soundtrackBuffer){const s=audioCtx.createBufferSource();s.buffer=soundtrackBuffer;s.loop=true;s.connect(audioCtx.destination);s.start(0);}if(ambientCruiseBuffer){const s=audioCtx.createBufferSource();ambientCruiseGain=audioCtx.createGain();s.buffer=ambientCruiseBuffer;s.loop=true;s.connect(ambientCruiseGain);ambientCruiseGain.connect(audioCtx.destination);s.start(0);ambientCruiseGain.gain.value=1.0;}if(ambientBoostBuffer){const s=audioCtx.createBufferSource();ambientBoostGain=audioCtx.createGain();s.buffer=ambientBoostBuffer;s.loop=true;s.connect(ambientBoostGain);ambientBoostGain.connect(audioCtx.destination);s.start(0);ambientBoostGain.gain.value=0.0;}}catch(e){console.error("Audio Init Error:",e);window.onerror("Error in initializeAudio","script",0,0,e);}}
         function playSound(buffer) { if(!audioCtx||!buffer||!(buffer instanceof AudioBuffer))return;const s=audioCtx.createBufferSource();s.buffer=buffer;s.connect(audioCtx.destination);s.start(0);}
@@ -64,22 +65,37 @@
 			frameCount++;
             oceanOffsetY += oceanSpeed * cameraZoom;
             if (cameraZoom !== targetZoom) { cameraZoom += (targetZoom - cameraZoom) * 0.05; if (Math.abs(cameraZoom - targetZoom) < 0.01) cameraZoom = targetZoom; }
+
             if (state === 'dragging') {
-                // Calculate the target position for the jet (above the finger)
                 let targetJetX = lastPointerX_world;
                 let targetJetY = lastPointerY_world - (DRAG_VERTICAL_OFFSET / cameraZoom);
 
-                // Lerp the jet's position towards the target position
-                jetX += (targetJetX - jetX) * JET_FOLLOW_LERP_SPEED;
-                jetY += (targetJetY - jetY) * JET_FOLLOW_LERP_SPEED;
+                // Calculate desired movement based on lerp
+                let desiredDx = (targetJetX - jetX) * JET_FOLLOW_LERP_SPEED;
+                let desiredDy = (targetJetY - jetY) * JET_FOLLOW_LERP_SPEED;
+
+                // Calculate the distance of this desired movement
+                const desiredDistance = Math.sqrt(desiredDx * desiredDx + desiredDy * desiredDy);
+
+                // If the desired distance exceeds the max speed, cap it
+                if (desiredDistance > MAX_JET_SPEED_PER_FRAME) {
+                    const scaleFactor = MAX_JET_SPEED_PER_FRAME / desiredDistance;
+                    desiredDx *= scaleFactor;
+                    desiredDy *= scaleFactor;
+                }
+
+                // Apply the (potentially capped) movement
+                jetX += desiredDx;
+                jetY += desiredDy;
             }
-            if (state === 'recentering') { jetX += (0 - jetX) * 0.08; jetY += (0 - jetY) * 0.08; if (Math.abs(jetX) < 1 && Math.abs(jetY) < 1 && cameraZoom === 1.0) { jetX = 0; jetY = 0; state = 'high'; } }
+         
+        if (state === 'recentering') { jetX += (0 - jetX) * 0.08; jetY += (0 - jetY) * 0.08; if (Math.abs(jetX) < 1 && Math.abs(jetY) < 1 && cameraZoom === 1.0) { jetX = 0; jetY = 0; state = 'high'; } }
             spawnParticles();
             updateParticles();
         }
 
         function spawnParticles() {
-			if (frameCount % 2 !== 0) return;
+			if (frameCount % 1 !== 0) return;
             if (state !== 'dragging') return;
 
             particles.push({ type: 'contrail', x: jetX - 25, y: jetY + 28, life: 0, maxLife: 240 });
@@ -95,14 +111,14 @@
 				type: 'wake_trail', 
 				x: jetX - wakeTrailX_Spread, y: wakeTrailY, 
 				life: 0, maxLife: wakeTrailMaxLife,
-				direction: -1 // -1 for left
+				direction: -2 // -1 for left
 			});
 			// Right wake trail particle
 			particles.push({ 
 				type: 'wake_trail', 
 				x: jetX + wakeTrailX_Spread, y: wakeTrailY, 
 				life: 0, maxLife: wakeTrailMaxLife,
-				direction: 1 // 1 for right
+				direction: 2 // 1 for right
 			});
         }
 
